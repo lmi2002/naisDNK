@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "PC-DB",
+    "children" : [ {
+      "name" : "16556@PC-DB.main(1)",
+      "children" : [ {
+        "name" : "viewDovidkaContentTest",
+        "uid" : "cbace948b4d0cd6f",
+        "parentUid" : "374aa70b97f8c8ef3b435c4d1fe91444",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640876076207,
+          "stop" : 1640876093371,
+          "duration" : 17164
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "374aa70b97f8c8ef3b435c4d1fe91444"
+    } ],
+    "uid" : "40c78e9f7e3cbac19510dfac34e47c1c"
+  } ]
+}
