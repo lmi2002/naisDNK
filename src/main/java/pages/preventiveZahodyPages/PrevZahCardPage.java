@@ -1,6 +1,7 @@
 package pages.preventiveZahodyPages;
 
 import io.qameta.allure.Step;
+import libs.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -57,7 +58,10 @@ public class PrevZahCardPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/preventive-measure/view?id=220595");
+        // Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/view?id=220595");
+        String regex = configProperties.base_url() + "/preventive-measure/view\\?id=[0-9]*";
+        String str = webDriver.getCurrentUrl();
+        Assert.assertTrue(Utils.checkRegex(regex, str));
     }
 
     @Step

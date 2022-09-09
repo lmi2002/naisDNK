@@ -77,11 +77,11 @@ public class DocumentsPage extends ParentPage {
     }
 
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/index?documentType=npa");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/index?documentType=npa");
     }
 
     public void checkIsPageURLProdPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/index?documentType=npa");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/index?documentType=npa");
     }
 
 

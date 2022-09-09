@@ -19,7 +19,7 @@ public class RichniPlansMainPage extends ParentPage {
     @FindBy(xpath = ".//nav/div/div/div[1]/div/a/img")
     private WebElement pageLogo;
 
-    @FindBy(xpath = ".//span[@id='select2-w2-container' and contains(text(),'За 2021 рік')]")
+    @FindBy(xpath = ".//span[@id='select2-w2-container' and contains(text(),'За 20')]")
     private WebElement yearField;
 
     @FindBy(xpath = ".//span/span/span[2]/ul/li[1]")
@@ -33,6 +33,9 @@ public class RichniPlansMainPage extends ParentPage {
 
     @FindBy(xpath = ".//span[@title='За 2021 рік']")
     private WebElement year2021Item;
+
+    @FindBy(xpath = ".//span[@title='За 2022 рік']")
+    private WebElement year2022Item;
 
     @FindBy(xpath = ".//span[@class='select2-selection__rendered' and contains(text(),'Центральні органи')]")
     private WebElement organTypeField;
@@ -151,7 +154,7 @@ public class RichniPlansMainPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/regulators-plans/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulators-plans/index");
     }
 
     @Step
@@ -166,7 +169,7 @@ public class RichniPlansMainPage extends ParentPage {
 
     @Step
     public boolean isYearItemDisplayed() {
-        return actionsWithOurElements.isElementDisplayed(year2021Item);
+        return actionsWithOurElements.isElementDisplayed(year2022Item);
     }
 
     @Step

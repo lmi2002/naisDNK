@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class ReportPlanPerevirkyAll2017Page extends ParentPage {
 
     public ReportPlanPerevirkyAll2017Page(WebDriver webDriver) {
-        super(webDriver, "/report/planned?regulator_id=61&planning_period_id=3");
+        super(webDriver, "/report/planned?regulator_id=34&planning_period_id=3");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Звіт про виконання річного плану (Держпраці)')]")

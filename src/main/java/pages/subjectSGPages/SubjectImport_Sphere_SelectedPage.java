@@ -25,7 +25,7 @@ public class SubjectImport_Sphere_SelectedPage extends ParentPage {
     @FindBy(xpath = ".//*[@id='select2-w2-container']")
     private WebElement yearField;
 
-    @FindBy(xpath = ".//span/span/span[2]/ul/li[6]")
+    @FindBy(xpath = ".//span/span/span[2]/ul/li[7]")
     private WebElement yearItem;
 
     @FindBy(xpath = ".//li[@class='user_nav_box']//h3[@class='user_nav_title' and contains(text(),'Планування')]")
@@ -130,7 +130,7 @@ public class SubjectImport_Sphere_SelectedPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject-import/import?type=1&regulator_id=262&sphere_id=136");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject-import/import?type=1&regulator_id=262&sphere_id=136");
     }
 
 }

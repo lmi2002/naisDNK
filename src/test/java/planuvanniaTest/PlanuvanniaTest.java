@@ -1,16 +1,24 @@
 package planuvanniaTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class PlanuvanniaTest extends AbstractParentTest {
 
     @Before
     public void preconditions() {
+        String role = "officialPersonPO_MR";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("test125@gmail.com", "123456789");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnPerevirky();
         mainPage.mainMenu.clickOnPlanuvannyaPerelikPeriodiv();
 
@@ -67,7 +75,7 @@ public class PlanuvanniaTest extends AbstractParentTest {
         planPerevirok2018Page.backToPlanuvanniaPageLinkIsDisplayed();
     }
 
-    /* Нужно добавить данные
+    @Ignore("Нужно добавить данные")
     @Test
     public void viewRichnyPlanKO2019PageTest() {
         planuvanniaPage.clickOnGoToYearPlan2019Btn();
@@ -84,6 +92,7 @@ public class PlanuvanniaTest extends AbstractParentTest {
         richnyPlanKO2019Page.goToVybirkaSGBtnPresent();
     }
 
+    @Ignore("Нужно добавить данные")
     @Test
     public void viewRichnyPlanKO2020PageTest() {
         planuvanniaPage.clickOnGoToYearPlan2020Btn();
@@ -99,5 +108,5 @@ public class PlanuvanniaTest extends AbstractParentTest {
         richnyPlanKO2020Page.checkIsSphereSelectFieldPresent();
         richnyPlanKO2020Page.goToVybirkaSGBtnPresent();
     }
-    */
+
 }

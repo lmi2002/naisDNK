@@ -1,21 +1,36 @@
 package subjectsTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 
 public class VybirkaTest extends AbstractParentTest {
 
+    @Rule
+    public final TestName name = new TestName();
     @Before
     public void preconditions() {
+        String role = "officialPersonTPO";
+        String methodName = name.getMethodName();
+        if (methodName.equals("sendVybirkaToCATest")) {
+            role = "officialPersonCA";
+        }
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
     }
 
     @Test
     public void viewSubjectsPageElementsTest() {
-
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.checkCurrentUrl();
@@ -34,7 +49,6 @@ public class VybirkaTest extends AbstractParentTest {
 
     @Test
     public void viewVybirkaSG_SphereSelectedPageTest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.clickOnSphereField();
@@ -59,7 +73,6 @@ public class VybirkaTest extends AbstractParentTest {
 
     @Test
     public void viewVybirkaSG_Sphere_Year_SelectedPageTest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.clickOnSphereField();
@@ -85,12 +98,12 @@ public class VybirkaTest extends AbstractParentTest {
         subject_vybirka_sphere_year_selectedPage.isMoveToVybirkaBtnDisplayed();
     }
 
+    @Ignore("Разобратся что должен проверять тест")
     @Test
     public void moveSubjectInVybirkaTest() {
 
         // Перенесення Суб'єкта в вибірку
 
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.clickOnSphereField();
@@ -109,12 +122,10 @@ public class VybirkaTest extends AbstractParentTest {
 
     @Test
     public void viewVybirka2021PageTest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.mainMenu.clickOnPerevirky();
         subjectsListPage.mainMenu.clickOnPlanuvannyaPerelikPeriodiv();
-        // planuvanniaPage.clickOnGoToVybirka2021Btn();
         vybirkaSG2021Page.checkIsPageURLPresent();
         vybirkaSG2021Page.checkIsPageTitlePresent();
         vybirkaSG2021Page.checkIsPageLogoPresent();
@@ -126,10 +137,9 @@ public class VybirkaTest extends AbstractParentTest {
         vybirkaSG2021Page.dowmloadVybirkaSGBtnIsDisplayed();
         vybirkaSG2021Page.algorytmPlanBtnIsDisplayed();
     }
-
+    @Ignore("Разобратся на какой роли есть функционал синхронизация")
     @Test
     public void sendVybirkaToCATest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.mainMenu.clickOnPerevirky();
@@ -172,7 +182,6 @@ public class VybirkaTest extends AbstractParentTest {
         loginPage.fillingLoginFormAndSubmitIt("iastestuser2_ca", "123007");
         mainPage.mainMenu.clickOnPerevirky();
         mainPage.mainMenu.clickOnPlanuvannyaPerelikPeriodiv();
-        // planuvanniaPage.clickOnGoToVybirka2021Btn();
         vybirkaSG2021Page.clickOnGoToPerelikTerOrg_CA_Btn();
         terOrgWhichSentPlanPage.checkIsDisapprovePlanBtnPresent();
         terOrgWhichSentPlanPage.clickOnSphereField();
@@ -193,5 +202,6 @@ public class VybirkaTest extends AbstractParentTest {
         archiveVybirka2021Page.clickOnConfirmBackFromArchive_ModalWin_Btn();
         vybirkaSG2021Page.checkIsUspih_BackFromArchive_message_modalWinPresent();
         vybirkaSG2021Page.clickOnCloseModalWinBtn();
+
     }
 }

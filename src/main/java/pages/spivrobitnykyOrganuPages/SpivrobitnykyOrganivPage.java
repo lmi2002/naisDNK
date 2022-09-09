@@ -113,7 +113,7 @@ public class SpivrobitnykyOrganivPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/user/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/user/index");
     }
 
     @Step

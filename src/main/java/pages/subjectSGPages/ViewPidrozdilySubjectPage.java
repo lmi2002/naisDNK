@@ -39,7 +39,7 @@ public class ViewPidrozdilySubjectPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/view/branches?subject_id=15076");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/view/branches?subject_id=15076");
     }
 
     @Step

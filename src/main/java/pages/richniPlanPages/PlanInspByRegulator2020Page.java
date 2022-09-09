@@ -68,7 +68,7 @@ public class PlanInspByRegulator2020Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan/annual?planningPeriodId=4&regulatorId=39");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan/annual?planningPeriodId=4&regulatorId=39");
     }
 
     @Step

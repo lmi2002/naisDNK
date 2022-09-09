@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import parentPage.ParentPage;
 
+import java.util.concurrent.TimeUnit;
+
 public class SubjectCardPage extends ParentPage {
 
     public SubjectCardPage(WebDriver webDriver) {
@@ -66,7 +68,7 @@ public class SubjectCardPage extends ParentPage {
     @FindBy(xpath = ".//div[contains(text(),'Цех')]")
     private WebElement newObject;
 
-    @FindBy(xpath = ".//*[@id='w1']/table/tbody/tr[1]/td[9]/span")
+    @FindBy(xpath = ".//span[contains(@class,'icon-garbage')]")
     private WebElement deleteObjectBtn;
 
     @FindBy(xpath = ".//button[@data-bb-handler='confirm']")
@@ -90,7 +92,7 @@ public class SubjectCardPage extends ParentPage {
     @FindBy(xpath = ".//input[@class='select2-search__field']")
     private WebElement planPeriodField;
 
-    @FindBy(xpath = ".//li[@class='select2-results__option select2-results__option--highlighted' and contains(text(),'2022')]")
+    @FindBy(xpath = ".//li[@class='select2-results__option select2-results__option--highlighted' and contains(text(),'2023')]")
     private WebElement planPeriodItem;
 
     @FindBy(xpath = ".//button[@class='btn btn-primary' and contains(text(),'Зберегти обов')]")
@@ -197,7 +199,8 @@ public class SubjectCardPage extends ParentPage {
     }
 
     @Step
-    public void clickOnSaveObjectBtn() {
+    public void clickOnSaveObjectBtn() throws InterruptedException {
+        actionsWithOurElements.pause();
         actionsWithOurElements.clickOnElement(saveObjectBtn);
     }
 
@@ -287,9 +290,15 @@ public class SubjectCardPage extends ParentPage {
             actionsWithOurElements.isElementDisplayed(savePlanPeriodBtn);
         }
     }
-        @Step
-        public void clickOnDeleteRiskLevel () {
-            actionsWithOurElements.clickOnElement(deleteRiskLevel);
-        }
 
+    @Step
+    public void clickOnDeleteRiskLevel() {
+        actionsWithOurElements.clickOnElement(deleteRiskLevel);
     }
+
+    @Step
+    public void waiting () {
+        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
+
+}

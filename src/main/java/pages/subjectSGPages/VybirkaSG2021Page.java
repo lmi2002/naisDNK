@@ -173,12 +173,12 @@ public class VybirkaSG2021Page extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Вибірка суб’єктів господарювання (Всі)");
+        Assert.assertEquals(webDriver.getTitle(), "Планові періоди");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan-project-inspection/index?planning_period_id=6");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/planning-period/index");
     }
 
     @Step

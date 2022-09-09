@@ -25,7 +25,7 @@ public class ZvitProPorushenniaVymogKO2018Page extends ParentPage {
     @FindBy(xpath = ".//*[@id='select2-sphere-container']")
     private WebElement sphereField;
 
-    @FindBy(xpath = ".//section[1]/div/div[2]/div/div[2]/div/div/table/tbody")
+    @FindBy(xpath = ".//div[@class='inspector-table-wrap']")
     private WebElement gridBody;
 
 
@@ -46,7 +46,7 @@ public class ZvitProPorushenniaVymogKO2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/violation-of-requirements?year=2018&regulator_id=103&sphere_id=130");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/violation-of-requirements?year=2018&regulator_id=205&sphere_id=93");
     }
 
     @Step

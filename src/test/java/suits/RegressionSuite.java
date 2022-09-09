@@ -21,12 +21,16 @@ import ratingInspectorsTest.RatingInspectorsTest;
 import ratingSGTest.RatingSGTest;
 import regulatorTest.RegulatorTest;
 import requestPasswordResetPROD.RequestPasswordResetPROD;
-//import resultsInspZaZvernenniam.ResultsInspZaZvernenniam;
+import resultsInspZaZvernenniam.ResultsInspZaZvernenniam;
 import richniPlanTest.RichniPlanTest;
+import richniPlanTest.ViewZminyDoRichnogoPlanTest;
 import riskCriteriaTest.RiskCriteriaTest;
+import searchOnMainPageTest.SearchOnMainPageComplexInspTest;
 import searchOnMainPageTest.SearchOnMainPageRichniInspTest;
+import skargyDoDRSTest.SkargyDoDRSTest;
 import sphereTest.SphereTest;
 import spivrobitnykyOrganuTest.SpivrobitnykyOrganuTest;
+import spivrobitnykyPidprOrganivTest.SpivrobitnykyPidprOrganivTest;
 import storinkaOrganuSubMenuTest.StorinkaOrganuSubMenuTest;
 import subjectsTest.*;
 import trainingMaterialTest.TrainingMaterialTest;
@@ -43,48 +47,56 @@ import zvitnistTest.ZvitProPorushenniaVymogTest;
 @RunWith(Suite.class)
 @Suite.SuiteClasses(
         {
-                //AnalitykaTest.class,
+                // LoginTest.class,
+                // NegativeLoginTest.class,
+                // AnalitykaTest.class,
+                // AudytTest.class,
                 ComplexPlanTest.class,
                 DovidkaTest.class,
                 FormyActInspTest.class,
                 InfoVisitsTest.class,
-                //InspCreateStepsTest.class,
-                LoginTest.class,
-                NegativeLoginTest.class,
-                PerevirkyListNotAuthTest.class,
-                PerevirkyTest.class,
-                PreventiveZahodyTest.class,
-                RatingInspectorsTest.class,
-                RegulatorTest.class,
-                RichniPlanTest.class,
-                RiskCriteriaTest.class,
-                SearchOnMainPageRichniInspTest.class,
-                SphereTest.class,
-                SubjectsTest.class,
-                //UpdateUserTest.class,
-                VyhidTest.class,
-                ZakonodavstvoTest.class,
+                // InspCreateStepsTest.class,
                 OpenPagesFromMenuNotAuthTest.class,
                 OpenPagesFromMenuPRODTest.class,
-                SpivrobitnykyOrganuTest.class,
-                StorinkaOrganuSubMenuTest.class,
-                //ResultsInspZaZvernenniam.class,
+                PerevirkyListNotAuthTest.class,
+                PerevirkyTest.class,
                 PlanuvanniaTest.class,
                 PovidomlenniaTest.class,
+                PreventiveZahodyTest.class,
+                RatingInspectorsTest.class,
                 RatingSGTest.class,
+                RegulatorTest.class,
+                // RequestPasswordResetPROD.class,
+                ResultsInspZaZvernenniam.class,
+                RichniPlanTest.class,
+                ViewZminyDoRichnogoPlanTest.class,
+                RiskCriteriaTest.class,
+                SearchOnMainPageComplexInspTest.class,
+                SearchOnMainPageRichniInspTest.class,
+                // SkargyDoDRSTest.class,
+                SphereTest.class,
+                SpivrobitnykyOrganuTest.class,
+                // SpivrobitnykyPidprOrganivTest.class,
+                StorinkaOrganuSubMenuTest.class,
+                CheckCriteriaChangesTest.class,
                 CheckDateAndRiskChanges1Test.class,
                 CheckDateAndRiskChanges2Test.class,
                 CheckDateAndRiskChanges3Test.class,
                 CheckDateAndRiskChanges4Test.class,
                 CheckDateAndRiskChanges5Test.class,
-                CheckCriteriaChangesTest.class,
+                // ImportFileWithSGTest.class,
+                SubjectsTest.class,
+                VybirkaTest.class,
                 TrainingMaterialTest.class,
-                //AudytTest.class,
-                RichniZvityTest.class,
+                UpdateUserTest.class,
+                // UzgodzhenniaDatePageTest.class,
+                VyhidTest.class,
+                ZakonodavstvoTest.class,
                 RichnaZvitnistPoOrganuTest.class,
+                RichniZvityTest.class,
                 ZvitPoZahodahTest.class,
-                ZvitProPorushenniaVymogTest.class,
-                RequestPasswordResetPROD.class
+                ZvitProPorushenniaVymogTest.class
+
         }
 )
 

@@ -126,7 +126,7 @@ public class ApprovedEmployeesPidpOrgPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/user/index?tab=approved&sub=1");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/user/index?tab=approved&sub=1");
     }
 
     @Step

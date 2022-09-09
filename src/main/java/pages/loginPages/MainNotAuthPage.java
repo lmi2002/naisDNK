@@ -2,6 +2,7 @@ package pages.loginPages;
 
 import io.qameta.allure.Step;
 import org.junit.Assert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import parentPage.ParentPage;
 
 public class MainNotAuthPage extends ParentPage {
 
-    private String url = "https://inspections.test.nais.gov.ua";
+    private String url = configProperties.base_url();
     private String urlProd = "https://inspections.gov.ua";
 
     public MainMenu mainMenu;
@@ -53,6 +54,4 @@ public class MainNotAuthPage extends ParentPage {
         actionsWithOurElements.clickOnElement(uviytyMainMenuNotAuthItem);
         logger.info("Element -Uviyty- was clicked");
     }
-
-
 }

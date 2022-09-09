@@ -1,6 +1,8 @@
 package infoVisitsTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +10,14 @@ public class InfoVisitsTest extends AbstractParentTest {
 
     @Before
     public void preconditions() {
+        String role = "officialPersonPO_MR";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.checkCurrentUrl();
-        loginPage.fillingLoginFormAndSubmitIt("test125@gmail.com", "123456789");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnPerevirky();
         mainPage.mainMenu.clickOnInformaciyniVidviduvannia();
     }
@@ -36,7 +42,7 @@ public class InfoVisitsTest extends AbstractParentTest {
     @Test
     public void searchResultInfoVisitTest() {
         infoVisitPage.clickOn2022Link();
-        infoVisitPage.enterSGCodeInToSearchField("19393752" + "\n");
+        infoVisitPage.enterSGCodeInToSearchField("30356126" + "\n");
         searchResultInfoVisitPage.checkIsPageURLPresent();
         searchResultInfoVisitPage.checkIsPageTitlePresent();
         searchResultInfoVisitPage.checkIsPageLogoPresent();
@@ -84,7 +90,7 @@ public class InfoVisitsTest extends AbstractParentTest {
     @Test
     public void viewInfoVisitCardTest() {
         infoVisitPage.clickOn2022Link();
-        infoVisitPage.enterSGCodeInToSearchField("19393752" + "\n");
+        infoVisitPage.enterSGCodeInToSearchField("30356126" + "\n");
         searchResultInfoVisitPage.clickOnViewInfoVisitCardBtn();
         infoVisitCardPage.checkIsPageURLPresent();
         infoVisitCardPage.checkIsPageTitlePresent();

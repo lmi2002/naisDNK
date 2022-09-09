@@ -17,7 +17,7 @@ public class RichnaZvitnistPoOrganuPage extends ParentPage {
     @FindBy(xpath = ".//nav/div/div/div[1]/div/a/img")
     private WebElement pageLogo;
 
-    @FindBy(xpath = ".//th[contains(text(),'Рік')]")
+    @FindBy(xpath = ".//th[contains(text(),'Період')]")
     private WebElement gridElement;
 
     @FindBy(xpath = ".//b[(text()) and contains(text(),'1-')]")
@@ -52,7 +52,7 @@ public class RichnaZvitnistPoOrganuPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/by-sphere");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/by-sphere");
     }
 
     @Step

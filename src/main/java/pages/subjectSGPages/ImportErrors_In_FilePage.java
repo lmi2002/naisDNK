@@ -250,7 +250,7 @@ public class ImportErrors_In_FilePage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject-import/import-errors?regulator_id=50&sphere_id=136&planning_period_id=6&id=5441");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject-import/import-errors?regulator_id=50&sphere_id=136&planning_period_id=6&id=5441");
     }
 
 }

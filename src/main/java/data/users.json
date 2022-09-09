@@ -1,0 +1,30 @@
+{
+    "adminCA": {
+        "login": "lifecomru53@gmail.com",
+        "passwd": "123456789",
+        "passwdKey": "123456789",
+        "rnokpp": "5231231234",
+        "pathToKey": "\\adminCA\\Key-6.dat"
+    },
+    "officialPersonCA": {
+        "login": "a.slipchenko@dpss.gov.ua",
+        "passwd": "123456789",
+        "passwdKey": "123456789",
+        "rnokpp": "1271231234",
+        "pathToKey": "\\officialPersonCA\\Key-6.dat"
+    },
+    "officialPersonTPO": {
+        "login": "chervan@vingudpss.gov.ua",
+        "passwd": "123456789",
+        "passwdKey": "123456789",
+        "rnokpp": "1232231234",
+        "pathToKey": "\\officialPersonTPO\\Key-6.dat"
+    },
+    "officialPersonPO_MR": {
+        "login": "test125@gmail.com",
+        "passwd": "123456789",
+        "passwdKey": "123456789",
+        "rnokpp": "1234231234",
+        "pathToKey": "\\officialPersonPO_MR\\Key-6.dat"
+    }
+}

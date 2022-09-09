@@ -76,7 +76,7 @@ public class TerOrgWhichSentPlanPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan-project/regulators?planning_period_id=6");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-project/regulators?planning_period_id=6");
     }
 
     @Step

@@ -54,7 +54,7 @@ public class CreateTrainingMaterialsPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/training-material/create");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/training-material/create");
     }
 
     @Step

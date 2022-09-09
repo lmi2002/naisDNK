@@ -45,7 +45,7 @@ public class PozaplanInsp2020Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/unplanned?planning_period_id=7");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/unplanned?planning_period_id=7");
     }
 
     @Step

@@ -45,7 +45,7 @@ public class RegulatorSearchResultPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/regulator/index?Regulator%5Bname%5D=%D0%94%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D0%B0%20%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8%20%D0%B7%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D1%8C%20%D0%BF%D1%80%D0%B0%D1%86%D1%96&Regulator%5Btype%5D=&Regulator%5Bcontacts%5D=&Regulator%5Bparent_name%5D=");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulator/index?Regulator%5Bname%5D=%D0%94%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D0%B0%20%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8%20%D0%B7%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D1%8C%20%D0%BF%D1%80%D0%B0%D1%86%D1%96&Regulator%5Btype%5D=&Regulator%5Bcontacts%5D=&Regulator%5Bparent_name%5D=");
     }
 
     @Step

@@ -54,12 +54,12 @@ public class DovidkaPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(),"https://inspections.test.nais.gov.ua/static/help");
+        Assert.assertEquals(webDriver.getCurrentUrl(),configProperties.base_url() + "/static/help");
     }
 
     @Step
     public void checkIsPageURLProdPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(),"https://inspections.test.nais.gov.ua/static/help");
+        Assert.assertEquals(webDriver.getCurrentUrl(),configProperties.base_url() + "/static/help");
     }
 
     @Step

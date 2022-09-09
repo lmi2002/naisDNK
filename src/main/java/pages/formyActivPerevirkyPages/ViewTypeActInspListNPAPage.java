@@ -1,11 +1,14 @@
 package pages.formyActivPerevirkyPages;
 
 import io.qameta.allure.Step;
+import libs.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import parentPage.ParentPage;
+
+import java.util.List;
 
 public class ViewTypeActInspListNPAPage extends ParentPage {
 
@@ -16,14 +19,14 @@ public class ViewTypeActInspListNPAPage extends ParentPage {
     @FindBy(xpath = ".//nav/div/div/div[1]/div/a/img")
     private WebElement pageLogo;
 
-    @FindBy(xpath = ".//h2[contains(text(),'Питання для перевірки дотримання вимог законодавста, які поширюються на всіх')]")
+    @FindBy(xpath = ".//h2[contains(text(),'Питання для перевірки дотримання вимог законодавства, які поширюються на всіх')]")
     private WebElement part1Title;
 
     @FindBy(xpath = ".//section[1]/div/div/div[2]/div/div/div/div[1]")
     private WebElement blockPart1;
 
-    @FindBy(xpath = ".//h2[contains(text(),'Питання для перевірки дотримання вимог законодавства')]")
-    private WebElement part2Title;
+    @FindBy(xpath = ".//h2[contains(text(),'Питання для перевірки дотримання вимог законодавства, які поширюються на всіх')]")
+    private List<WebElement> part2Title;
 
     @FindBy(xpath = ".//section[1]/div/div/div[2]/div/div/div/div[2]")
     private WebElement blockPart2;
@@ -34,10 +37,10 @@ public class ViewTypeActInspListNPAPage extends ParentPage {
     @FindBy(xpath = ".//div[@class='common-info-list']")
     private WebElement blockAllInfo;
 
-    @FindBy(xpath = ".//h2[contains(text(),'Перелік питань для перевірки вимог законодавства у сфері техногенної та пожежної безпеки')]")
-    private WebElement part3Title;
+    @FindBy(xpath = ".//h2[contains(text(),'Питання для перевірки дотримання вимог законодавства, які поширюються на всіх')]")
+    private List <WebElement> part3Title;
 
-    @FindBy(xpath = ".//*[@href='/document/view?id=866104&documentType=act_inspection_document&tab=questions']")
+    @FindBy(xpath = ".//*[@href='/document/view?id=42&documentType=act_inspection_document&tab=questions']")
     private WebElement perelikQuestionsLink;
 
     @Step
@@ -52,13 +55,18 @@ public class ViewTypeActInspListNPAPage extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Про затвердження уніфікованої форми акта, складеного за результатами проведення планового (позапланового) заходу державного нагляду (контролю) щодо дотримання суб'єктом господарювання вимог законодавства у сфері техногенної та пожежної безпеки, та інших форм розпорядчих документів");
+        // Assert.assertEquals(webDriver.getTitle(), "Про затвердження уніфікованої форми акта, складеного за результатами проведення планового (позапланового) заходу державного нагляду (контролю) щодо дотримання суб'єктом господарювання вимог законодавства у сфері техногенної та пожежної безпеки, та інших форм розпорядчих документів");
+        Assert.assertTrue(webDriver.getTitle().contains("Про затвердження уніфікованих форм актів"));
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/view?id=866104&documentType=act_inspection_document&tab=list");
+        // Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/view?id=866104&documentType=act_inspection_document&tab=list");
+        String regex = configProperties.base_url() + "/document/view\\?id=[0-9]*&documentType=act_inspection_document&tab=list";
+        String str = webDriver.getCurrentUrl();
+        Assert.assertTrue(Utils.checkRegex(regex, str));
     }
+
 
     @Step
     public boolean part1TitleIsDisplayed() {
@@ -82,7 +90,7 @@ public class ViewTypeActInspListNPAPage extends ParentPage {
 
     @Step
     public boolean part2TitleIsDisplayed() {
-        return actionsWithOurElements.isElementDisplayed(part2Title);
+        return actionsWithOurElements.isElementDisplayed(part2Title.get(1));
     }
 
     @Step
@@ -92,7 +100,7 @@ public class ViewTypeActInspListNPAPage extends ParentPage {
 
     @Step
     public boolean part3TitleIsDisplayed() {
-        return actionsWithOurElements.isElementDisplayed(part3Title);
+        return actionsWithOurElements.isElementDisplayed(part3Title.get(2));
     }
 
     @Step

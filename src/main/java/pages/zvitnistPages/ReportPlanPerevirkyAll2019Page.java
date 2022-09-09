@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class ReportPlanPerevirkyAll2019Page extends ParentPage {
 
     public ReportPlanPerevirkyAll2019Page(WebDriver webDriver) {
-        super(webDriver, "/report/planned?regulator_id=61&planning_period_id=2");
+        super(webDriver, "/report/planned?regulator_id=34&planning_period_id=2");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Звіт про виконання річного плану (Держпраці)')]")
@@ -58,7 +58,7 @@ public class ReportPlanPerevirkyAll2019Page extends ParentPage {
     }
 
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(),"https://inspections.test.nais.gov.ua/report/index?planning_period_id=6");
+        Assert.assertEquals(webDriver.getCurrentUrl(),configProperties.base_url() + "/report/index?planning_period_id=6");
     }
 
     public void checkIsPageURLProdPresent() {

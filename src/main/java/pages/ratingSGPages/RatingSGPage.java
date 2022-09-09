@@ -39,7 +39,7 @@ public class RatingSGPage extends ParentPage {
     @FindBy(xpath = ".//*[@id='w2']/table/tbody/tr[1]/td[2]/a")
     private WebElement sgNameLink;
 
-    @FindBy(xpath = ".//tr[1]//td[6 and contains(text(),'41.00')]")
+    @FindBy(xpath = ".//tr[1]//td[6 and contains(text(),'.00')]")
     private WebElement allMaxBal;
 
     @FindBy(xpath = ".//h4[@class='modal_title' and contains(text(),'Успіх')]")
@@ -66,7 +66,7 @@ public class RatingSGPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/subject-rating/index?regulatorId=568");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject-rating/index?regulatorId=568");
     }
 
     @Step

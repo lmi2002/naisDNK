@@ -14,7 +14,7 @@ public class SubjectsListPage extends ParentPage {
     //public SubjectsListPage(WebDriver webDriver) {super(webDriver, "/subject/index?regulatorId=61");} //охорона праці
 
     public SubjectsListPage(WebDriver webDriver) {
-        super(webDriver, "/subject/index?regulatorId=262");
+        super(webDriver, "/subject/index?regulatorId=205");
     } //Київське міжрегіональне управління Укртрансбезпеки
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Перелік суб')]")
@@ -50,7 +50,7 @@ public class SubjectsListPage extends ParentPage {
     @FindBy(xpath = ".//span/span/span[2]/ul/li[1]")
     private WebElement sphereItem;
 
-    @FindBy(xpath = ".//li[@class='select2-results__option' and contains(text(),'Автомобільний транспорт')]")
+    @FindBy(xpath = ".//li[@class='select2-results__option' and contains(text(),'Державний нагляд (контроль) у сфері захисту рослин')]")
     private WebElement sphereAutoTranspItem;
 
     @FindBy(xpath = ".//li[contains(text(),'2016')]")

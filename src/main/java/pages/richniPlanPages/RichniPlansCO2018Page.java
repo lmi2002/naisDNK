@@ -73,7 +73,7 @@ public class RichniPlansCO2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/regulators-plans/index?tab=tab_central_regulators_plans_2018");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulators-plans/index?tab=tab_central_regulators_plans_2018");
     }
 
     @Step

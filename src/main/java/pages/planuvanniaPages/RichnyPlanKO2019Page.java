@@ -128,6 +128,6 @@ public class RichnyPlanKO2019Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/plan-inspection/index?planning_period_id=2&regulator_id=568");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-inspection/index?planning_period_id=2&regulator_id=568");
     }
 }

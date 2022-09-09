@@ -3,8 +3,10 @@ package openPagesFromMenuPRODTest;
 import abstractParentTest.AbstractParentTest;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore("Прод. Не делаем проверку")
 public class OpenPagesFromMenuPRODTest extends AbstractParentTest {
 
     @Before

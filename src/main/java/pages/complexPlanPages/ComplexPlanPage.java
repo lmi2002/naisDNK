@@ -115,7 +115,7 @@ public class ComplexPlanPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/complex-plan/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/complex-plan/index");
     }
 
     @Step

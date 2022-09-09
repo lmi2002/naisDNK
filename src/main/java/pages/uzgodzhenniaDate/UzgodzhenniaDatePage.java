@@ -49,7 +49,7 @@ public class UzgodzhenniaDatePage extends ParentPage {
     @Step
     public void checkIsPageURLPresent() {
         try {
-            Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/date-proposal/index");
+            Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/date-proposal/index");
             logger.info(" Page URL is correct");
         } catch (Exception e) {
             actionsWithOurElements.stopTestAndPrintMessage();

@@ -73,7 +73,7 @@ public class PlanProjectKO2021Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan-inspection/index?planning_period_id=6&regulator_id=50");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-inspection/index?planning_period_id=6&regulator_id=50");
     }
 
     @Step

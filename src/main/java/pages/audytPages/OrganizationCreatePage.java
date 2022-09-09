@@ -96,7 +96,7 @@ public class OrganizationCreatePage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/audit/accredited-organizations/create?id=17");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/audit/accredited-organizations/create?id=17");
     }
 
     @Step
