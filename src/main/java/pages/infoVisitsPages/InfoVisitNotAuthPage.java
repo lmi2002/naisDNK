@@ -60,7 +60,7 @@ public class InfoVisitNotAuthPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/inspection-info-visit/all");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection-info-visit/all");
     }
 
     @Step

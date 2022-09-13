@@ -9,6 +9,8 @@ import parentPage.ParentPage;
 
 public class RichniPlanChangesPage extends ParentPage {
 
+
+
     public RichniPlanChangesPage (WebDriver webDriver) {
         super(webDriver, "/plan-change/index?plan_project_id=622");
     }
@@ -25,7 +27,7 @@ public class RichniPlanChangesPage extends ParentPage {
     @FindBy(xpath = ".//*[@id='w0']/table/tbody")
     private WebElement saveNakaz_1_lineBtn;
 
-    @FindBy(xpath = ".//tr[2]//td[5]//a[contains(text(),'Зберегти')]")
+    @FindBy(xpath = ".//a[contains(text(),'Збе')]")
     private WebElement saveNakaz_2_lineBtn;
 
 
@@ -66,7 +68,7 @@ public class RichniPlanChangesPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan-change/index?plan_project_id=622");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-change/index?plan_project_id=1104");
     }
 
     @Step

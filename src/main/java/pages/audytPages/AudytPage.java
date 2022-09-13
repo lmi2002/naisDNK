@@ -54,7 +54,7 @@ public class AudytPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/audit/audit");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/audit/audit");
     }
 
     @Step

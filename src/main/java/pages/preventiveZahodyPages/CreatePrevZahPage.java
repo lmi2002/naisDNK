@@ -96,7 +96,7 @@ public class CreatePrevZahPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/preventive-measure/create?id=34570");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/create?id=34570");
     }
 
     @Step

@@ -129,7 +129,7 @@ public class SearchResultApprovedSPOPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/user/index?UserSearch%5Bpib%5D=Савчук+Інна+Мелетіївна&UserSearch%5Bemail%5D=&UserSearch%5Bsphere_id%5D=&UserSearch%5Bcreated_at%5D=&UserSearch%5BregulatorName%5D=&UserSearch%5BedsRegulatorName%5D=&tab=approved&sub=1");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/user/index?UserSearch%5Bpib%5D=Савчук+Інна+Мелетіївна&UserSearch%5Bemail%5D=&UserSearch%5Bsphere_id%5D=&UserSearch%5Bcreated_at%5D=&UserSearch%5BregulatorName%5D=&UserSearch%5BedsRegulatorName%5D=&tab=approved&sub=1");
     }
 
     @Step

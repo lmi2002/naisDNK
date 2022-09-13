@@ -40,13 +40,13 @@ public class SphereSelectForVyborkaPage extends ParentPage {
     @FindBy(xpath = ".//li[@class='select2-results__option' and contains(text(),'2021')]")
     private WebElement item2021;
 
-    @FindBy(xpath = ".//tr[1]/td[11]//a[@class='btn-open-inspector-cart'] ")
+    @FindBy(xpath = "//a[@class='btn-open-inspector-cart']")
     private WebElement menuSGBtn;
 
     @FindBy(xpath = ".//section[1]/div/div[2]/div/div[2]/div/div/div/table/tbody/tr[1]/td[11]/div/ul/li[1]/a")
     private WebElement viewCardSGLink;
 
-    @FindBy(xpath = ".//tr[1]//td[11]//a[@title='Редагувати в сфері']")
+    @FindBy(xpath = ".//*[@id=\"w3\"]/table/tbody/tr[1]/td[12]/div/ul/li[3]/a")
     private WebElement editCardSGLink;
 
     @FindBy(xpath = ".//button[contains(text(),'Додати в сферу')]")
@@ -100,7 +100,7 @@ public class SphereSelectForVyborkaPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/index?regulatorId=262&sphereId=136&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/index?regulatorId=205&sphereId=93&tab=main");
     }
 
     @Step

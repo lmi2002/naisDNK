@@ -55,7 +55,7 @@ public class SearchResultApprovedSOPage extends ParentPage {
     @FindBy(xpath = ".//button[@class='btn btn-success']")
     private WebElement confirmModalBtn;
 
-    @FindBy(xpath = ".//a[contains(text(),'brdo_test@ukr.net')]")
+    @FindBy(xpath = ".//a[contains(text(),'iralube@gmail.com')]")
     private WebElement employeePIB;
 
     @Step
@@ -140,7 +140,7 @@ public class SearchResultApprovedSOPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/user/index?UserSearch%5Bpib%5D=Петренко+Ольга+Анатоліївна&UserSearch%5Bemail%5D=&UserSearch%5Bsphere_id%5D=&UserSearch%5Bcreated_at%5D=&UserSearch%5BregulatorName%5D=&UserSearch%5BedsRegulatorName%5D=&tab=approved&sub=0");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/user/index?UserSearch%5Bpib%5D=Петренко+Ольга+Анатоліївна&UserSearch%5Bemail%5D=&UserSearch%5Bsphere_id%5D=&UserSearch%5Bcreated_at%5D=&UserSearch%5BregulatorName%5D=&UserSearch%5BedsRegulatorName%5D=&tab=approved&sub=0");
     }
 
     @Step

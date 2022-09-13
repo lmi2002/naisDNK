@@ -45,7 +45,7 @@ public class ZvitPoZahodahKOza2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/activity?year=2018&regulator_id=103");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/activity?year=2018&regulator_id=103");
     }
 
     @Step

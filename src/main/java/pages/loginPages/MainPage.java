@@ -19,7 +19,7 @@ public class MainPage extends ParentPage {
         super(webDriver, "/");
     }
 
-    private String url = "http://inspections.staging.brdo.com.ua";
+    private String url = configProperties.base_url() + "";
     //private String url = "https://inspections.gov.ua";
 
     public MainMenu mainMenu;
@@ -201,7 +201,7 @@ public class MainPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/");
     }
 
     @Step

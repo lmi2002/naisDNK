@@ -41,12 +41,12 @@ public class EditZvit2019Page extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Редагування звіту");
+        Assert.assertEquals(webDriver.getTitle(), "Редагування звіту за 2019 рік");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/edit?year=2019");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/edit?year=2019");
     }
 
     @Step

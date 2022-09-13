@@ -57,6 +57,6 @@ public class PlanPerevirok2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/plan-project/index?planning_period_id=1");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-project/index?planning_period_id=1");
     }
 }

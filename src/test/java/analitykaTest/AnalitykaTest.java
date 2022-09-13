@@ -2,6 +2,7 @@ package analitykaTest;
 
 import abstractParentTest.AbstractParentTest;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AnalitykaTest extends AbstractParentTest {
@@ -11,9 +12,9 @@ public class AnalitykaTest extends AbstractParentTest {
         analitykaPage.openPage();
         analitykaPage.checkCurrentAdminUrl();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("oper@mns.gov.ua", "123456789");
+        loginPage.fillingLoginFormAndSubmitIt("lifecomru53@gmail.com", "123456789");
     }
-
+    @Ignore("Авторизация проходит через лигин и пароль через ссылку админа")
     @Test
     public void analitykaVisibleTest() throws InterruptedException {
         analitykaPage.pageTitleIsDisplayed();

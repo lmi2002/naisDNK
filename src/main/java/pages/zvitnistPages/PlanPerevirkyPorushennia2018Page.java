@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class PlanPerevirkyPorushennia2018Page extends ParentPage {
 
     public PlanPerevirkyPorushennia2018Page(WebDriver webDriver) {
-        super(webDriver, "/report/plan-violations?regulator_id=61&planning_period_id=1");
+        super(webDriver, "/report/plan-violations?regulator_id=34&planning_period_id=1");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Планові перевірки (порушення)')]")

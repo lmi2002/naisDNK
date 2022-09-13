@@ -70,7 +70,7 @@ public class SearchResultPrevZahPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/preventive-measure/index?PreventiveMeasureSearch%5BsubjectNames%5D=&PreventiveMeasureSearch%5BsubjectCodes%5D=19393752&PreventiveMeasureSearch%5BactivityTypeNames%5D=&PreventiveMeasureSearch%5Bmeasure_time%5D=&PreventiveMeasureSearch%5Bis_finished%5D=&PreventiveMeasureSearch%5Btype%5D=&PreventiveMeasureSearch%5Bsphere_id%5D=&PreventiveMeasureSearch%5Bregulator_id%5D=&planning_period_id=7&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/index?PreventiveMeasureSearch%5BsubjectNames%5D=&PreventiveMeasureSearch%5BsubjectCodes%5D=19393752&PreventiveMeasureSearch%5BactivityTypeNames%5D=&PreventiveMeasureSearch%5Bmeasure_time%5D=&PreventiveMeasureSearch%5Bis_finished%5D=&PreventiveMeasureSearch%5Btype%5D=&PreventiveMeasureSearch%5Bsphere_id%5D=&PreventiveMeasureSearch%5Bregulator_id%5D=&planning_period_id=7&tab=main");
     }
 
     @Step

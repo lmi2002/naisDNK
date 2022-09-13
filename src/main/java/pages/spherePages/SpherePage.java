@@ -31,7 +31,7 @@ public class SpherePage extends ParentPage {
     @FindBy(xpath = ".//input[@class='select2-search__field']")
     private WebElement organSearchField;
 
-    @FindBy(xpath = ".//a[@href='/sphere/view?id=124']")
+    @FindBy(xpath = ".//a[@href='/sphere/view?id=217']")
     private WebElement sphereName;
 
     @Step
@@ -71,7 +71,7 @@ public class SpherePage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/sphere/search");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/sphere/search");
     }
 
     @Step

@@ -42,7 +42,7 @@ public class PlanInsp2019Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/planned?planningPeriodId=2&tab=simple");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/planned?planningPeriodId=2&tab=simple");
     }
 
     @Step

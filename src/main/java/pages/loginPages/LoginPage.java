@@ -1,5 +1,6 @@
 package pages.loginPages;
 
+import libs.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,16 +16,34 @@ public class LoginPage extends ParentPage {
         super(webDriver, "/site/login");
     }
 
-    public String url = "https://inspections.test.nais.gov.ua/site/login";
+    public String url = configProperties.base_url() + "/site/login";
     public String prodUrl = "https://inspections.gov.ua";
 
-    @FindBy(xpath = ".//input[@id='loginform-username']")
+    // @FindBy(xpath = ".//input[@id='loginform-username']")
+    @FindBy(xpath = ".//input[@id='edsform-email']")
     private static WebElement inputLogin;
 
-    @FindBy(xpath = ".//input[@id='loginform-password']")
+    // @FindBy(xpath = ".//input[@id='loginform-password']")
+    @FindBy(xpath = ".//input[@id='edsform-password']")
     private static WebElement inputPassword;
 
-    @FindBy(xpath = ".//button[@name='login-button']")
+    @FindBy(xpath = ".//input[@id='edsform-code']")
+    private static WebElement inputRNOKPP;
+
+    @FindBy(xpath = ".//span[@id='select2-edsform-key_certification_center-container']")
+    private static WebElement fieldCertificationCenter;
+
+    @FindBy(xpath = ".//li[contains(@id,'select2-edsform-key_certification_center-result') and text()='Тестовий надавач електронних довірчих послуг']")
+    private static WebElement resultCertificationCenter;
+
+    @FindBy(xpath = ".//input[@id='edsform-file_key']")
+    private static WebElement inputFile;
+
+    @FindBy(xpath = ".//input[@id='edsform-password_to_file_key']")
+    private static WebElement inputPasswordKey;
+
+    // @FindBy(xpath = ".//button[@name='login-button']")
+    @FindBy(xpath = ".//button[text()='Увійти']")
     private static WebElement loginButton;
 
     @FindBy(xpath = ".//section/div/div/div/div/div/div/div/div[1]/form/div[4]/div[1]")
@@ -64,7 +83,7 @@ public class LoginPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/site/login");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/site/login");
     }
 
     @Step
@@ -78,9 +97,38 @@ public class LoginPage extends ParentPage {
     }
 
     @Step
+    public void enterPassInToInputRNOKPP(String code) {
+        actionsWithOurElements.enterTextInInput(inputRNOKPP, code);
+    }
+
+    @Step
+    public void enterPassInToInputFile(String path) {
+        actionsWithOurElements.enterTextInInput(inputFile, path);
+    }
+
+    @Step
     public void clickOnButtonLogIn() {
         actionsWithOurElements.clickOnElement(loginButton);
     }
+
+    @Step
+    public void clickOnfieldCertificationCenter() {
+        actionsWithOurElements.clickOnElement(fieldCertificationCenter);
+    }
+
+    @Step
+
+    public void scrollToResultCertificationCenter() {
+        actionsWithOurElements.getElementByScroll(resultCertificationCenter);
+    }
+    public void clickOnResultCertificationCenter() {
+        actionsWithOurElements.clickOnElement(resultCertificationCenter);
+    }
+
+    @Step
+    public void enterPassInToInputPasswordKey(String passwdKey) {
+        actionsWithOurElements.enterTextInInput(inputPasswordKey, passwdKey); }
+
 
     @Step
     public boolean isPageLoaded() {
@@ -135,5 +183,20 @@ public class LoginPage extends ParentPage {
         enterPassInToInputPassword(pass);
         clickOnButtonLogIn();
     }
+
+    @Step
+    // Заполнение полей новой формы с РНОКПП
+    public void extFillingLoginFormAndSubmit(String login, String passwd, String code, String path, String passwdKey) {
+        enterLoginInToInputLogin(login);
+        enterPassInToInputPassword(passwd);
+        enterPassInToInputRNOKPP(code);
+        clickOnfieldCertificationCenter();
+        scrollToResultCertificationCenter();
+        clickOnResultCertificationCenter();
+        enterPassInToInputFile(path);
+        enterPassInToInputPasswordKey(passwdKey);
+        Utils.waitABit(5);
+        clickOnButtonLogIn();
+   }
 
 }

@@ -267,7 +267,7 @@ public class SubjectsPageNotAuth extends ParentPage {
     }
 
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/subject/index?regulatorId=0");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/index?regulatorId=0");
     }
 
     public void checkIsPageURLProdPresent() {

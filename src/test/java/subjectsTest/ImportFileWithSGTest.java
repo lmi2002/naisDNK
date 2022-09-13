@@ -1,21 +1,36 @@
 package subjectsTest;
 
 import abstractParentTest.AbstractParentTest;
-import org.junit.Before;
-import org.junit.Test;
+import libs.Utils;
+import org.json.JSONObject;
+import org.junit.*;
+import org.junit.rules.TestName;
+import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 
+
+@Ignore("Узнать как работает импорт")
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ImportFileWithSGTest extends AbstractParentTest {
 
+    @Rule
+    public final TestName name = new TestName();
     @Before
     public void preconditions() {
+        String role = "officialPersonTPO";
+        String methodName = name.getMethodName();
+        if (methodName.equals("to_1_importFileWith_SGTest")) {
+            role = "officialPersonCA";
+        }
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
     }
-
     @Test
-    public void importFileWith_SGTest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
+    public void to_1_importFileWith_SGTest() {
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.clickOnImportBtn();
@@ -26,13 +41,12 @@ public class ImportFileWithSGTest extends AbstractParentTest {
         subjectImportPage.clickOnSphereItem();
         subjectImport_sphere_selectedPage.clickOnYearField();
         subjectImport_sphere_selectedPage.clickOnYearItem();
-        subjectImport_sphere_year_selectedPage.fileUpload("C:/Users/Administrator/Desktop/IAS/src/main/java/data/ImportFileNew.xlsx");
+        subjectImport_sphere_year_selectedPage.fileUpload(Utils.getAbsolutePathToDataFiles("\\ImportFileNew.xlsx"));
         importErrors_in_filePage.allInfoBlockIsDisplayed();
     }
 
     @Test
-    public void checkErrorInfo_in_ImportSGFileTest() {
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
+    public void to_2_checkErrorInfo_in_ImportSGFileTest() {
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
         subjectsListPage.clickOnImportBtn();
@@ -40,7 +54,7 @@ public class ImportFileWithSGTest extends AbstractParentTest {
         subjectImportPage.clickOnSphereItem();
         subjectImport_sphere_selectedPage.clickOnYearField();
         subjectImport_sphere_selectedPage.clickOnYearItem();
-        subjectImport_sphere_year_selectedPage.fileUpload("C:/Users/Administrator/Desktop/IAS/src/main/java/data/ImportFileNew.xlsx");
+        subjectImport_sphere_year_selectedPage.fileUpload(Utils.getAbsolutePathToDataFiles("\\ImportFileNew.xlsx"));
         importErrors_in_filePage.checkIsPageLogoPresent();
         importErrors_in_filePage.allInfoBlockIsDisplayed();
         importErrors_in_filePage.summaryBlockIsDisplayed();

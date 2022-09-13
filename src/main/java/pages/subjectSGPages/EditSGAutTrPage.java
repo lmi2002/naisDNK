@@ -24,7 +24,12 @@ public class EditSGAutTrPage extends ParentPage {
     @FindBy(xpath = ".//input[@name='FSubjectRegulator[last_planned_date]']")
     private WebElement dateField;
 
+    /*
     @FindBy(xpath = ".//label[@class='has-star']")
+    private WebElement inspCheckbox;
+    */
+
+    @FindBy(xpath = ".//div[@class='checkbox']")
     private WebElement inspCheckbox;
 
     @FindBy(xpath = ".//*[@id='process-load-btn']")

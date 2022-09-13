@@ -5,6 +5,7 @@ import com.codeborne.selenide.junit.ScreenShooter;
 import com.codeborne.selenide.junit.TextReport;
 import org.apache.log4j.Logger;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -12,6 +13,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+@Ignore("Прод. Не делаем проверку")
 public class RequestPasswordResetPROD extends AbstractParentTest {
     protected Logger logger = Logger.getLogger(getClass());
 

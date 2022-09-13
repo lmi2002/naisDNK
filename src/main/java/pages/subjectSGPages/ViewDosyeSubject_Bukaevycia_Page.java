@@ -43,7 +43,7 @@ public class ViewDosyeSubject_Bukaevycia_Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/view/about?subject_id=63563");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/view/about?subject_id=63563");
     }
 
     @Step

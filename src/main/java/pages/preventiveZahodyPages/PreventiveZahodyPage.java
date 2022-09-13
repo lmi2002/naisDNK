@@ -75,7 +75,7 @@ public class PreventiveZahodyPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/preventive-measure/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/index");
     }
 
     @Step

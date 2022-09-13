@@ -28,7 +28,7 @@ public class ZvitProPorushenniaVymogPage extends ParentPage {
     @FindBy(xpath = ".//table[@class='table table-striped table-bordered visible-lg wide_table']")
     private WebElement gridBlockView;
 
-    @FindBy(xpath = ".//li[contains(text(),'Управління Держпраці у Вінницькій області')]")
+    @FindBy(xpath = ".//li[contains(text(),'Головне управління Держпродспоживслужби у Вінницькій області')]")
     private WebElement koItem;
 
     @FindBy(xpath = ".//span[@class='select2-results']//li[contains(text(),'За 2018 рік')]")
@@ -43,7 +43,7 @@ public class ZvitProPorushenniaVymogPage extends ParentPage {
     @FindBy(xpath = ".//span[@class='select2-results']//li[contains(text(),'За 2021 рік')]")
     private WebElement za2021Item;
 
-    @FindBy(xpath = ".//section[1]/div/div[2]/div/div[2]/div/div/table/tbody")
+    @FindBy(xpath = ".//div[@class='inspector-table-wrap']")
     private WebElement gridBody;
 
 
@@ -64,7 +64,7 @@ public class ZvitProPorushenniaVymogPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/violation-of-requirements");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/violation-of-requirements");
     }
 
     @Step

@@ -53,7 +53,7 @@ public class ProjectRichnogoPlanuPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/regulators-plans/view?planning_period_id=6&regulator_id=39");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulators-plans/view?planning_period_id=6&regulator_id=39");
     }
 
     @Step

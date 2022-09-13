@@ -143,7 +143,7 @@ public class Subject_Vybirka_SphereAutTrSelectedPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/index?regulatorId=50&sphereId=162&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/index?regulatorId=50&sphereId=162&tab=main");
     }
 
     @Step

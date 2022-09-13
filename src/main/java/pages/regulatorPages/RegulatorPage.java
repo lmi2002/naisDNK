@@ -45,12 +45,12 @@ public class RegulatorPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/regulator/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulator/index");
     }
 
     @Step
     public void checkIsPagePROD_URLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/regulator/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulator/index");
     }
 
     @Step

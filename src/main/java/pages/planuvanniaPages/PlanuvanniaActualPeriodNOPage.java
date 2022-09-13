@@ -139,7 +139,7 @@ public class PlanuvanniaActualPeriodNOPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/planning-period/index?PlanningPeriodSearch%5Bactive%5D=0");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/planning-period/index?PlanningPeriodSearch%5Bactive%5D=0");
     }
 
     @Step

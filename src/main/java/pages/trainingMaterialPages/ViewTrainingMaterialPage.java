@@ -43,7 +43,7 @@ public class ViewTrainingMaterialPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/training-material/view?id=5");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/training-material/view?id=13");
     }
 
     @Step

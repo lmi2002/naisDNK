@@ -45,7 +45,7 @@ public class PozaplanInsp2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/unplanned?regulatorId=568&planningPeriodId=1&tab=simple");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/unplanned?regulatorId=568&planningPeriodId=1&tab=simple");
     }
 
     @Step

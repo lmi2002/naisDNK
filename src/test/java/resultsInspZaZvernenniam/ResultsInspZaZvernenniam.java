@@ -1,16 +1,24 @@
 package resultsInspZaZvernenniam;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
-/*
+
 public class ResultsInspZaZvernenniam extends AbstractParentTest {
 
     @Before
     public void preconditions() {
+        String role = "officialPersonPO_MR";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("test125@gmail.com", "123456789");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnPerevirky();
         mainPage.mainMenu.clickOnRezultatyPerevirokZaZvernennyam();
     }
@@ -25,6 +33,7 @@ public class ResultsInspZaZvernenniam extends AbstractParentTest {
         resultsInspZaZvernenniamPage.checkIsPageLogoPresent();
     }
 
+    @Ignore("Нужно добавить данные")
     @Test
     public void viewResultsInspZaZvernenniam2018PageTest() {
         resultsInspZaZvernenniamPage.clickOnU2018YearLink();
@@ -35,6 +44,7 @@ public class ResultsInspZaZvernenniam extends AbstractParentTest {
         resultsInspZaZvernenniam2018Page.checkIsPageLogoPresent();
     }
 
+    @Ignore("Нужно добавить данные")
     @Test
     public void viewResultsInspZaZvernenniam2019PageTest() {
         resultsInspZaZvernenniamPage.clickOnU2019YearLink();
@@ -45,6 +55,7 @@ public class ResultsInspZaZvernenniam extends AbstractParentTest {
         resultsInspZaZvernenniam2019Page.checkIsPageLogoPresent();
     }
 
+    @Ignore("Нужно добавить данные")
     @Test
     public void viewResultsInspZaZvernenniam2020PageTest() {
         resultsInspZaZvernenniam2018Page.clickOnU2020YearLink();
@@ -55,4 +66,3 @@ public class ResultsInspZaZvernenniam extends AbstractParentTest {
         resultsInspZaZvernenniam2020Page.checkIsPageLogoPresent();
     }
 }
-*/

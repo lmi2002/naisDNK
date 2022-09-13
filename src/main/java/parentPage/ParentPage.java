@@ -3,6 +3,7 @@ package parentPage;
 import io.qameta.allure.Step;
 import libs.ActionsWithOurElements;
 import libs.ConfigProperties;
+import libs.Utils;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -46,6 +47,19 @@ public class ParentPage {
         try {
             Assert.assertEquals("URL is not expected", expectedUrl,
                     webDriver.getCurrentUrl());
+
+        } catch (Exception e) {
+            logger.error("Can not get url" + e);
+            Assert.fail("Can not get url" + e);
+        }
+    }
+
+    @Step
+    public void checkCurrentUrlRegex(String pattern) {
+        try {
+            String regex =  expectedUrl + pattern;
+            // Assert.assertEquals("URL is not expected", expectedUrl, webDriver.getCurrentUrl());
+            Assert.assertTrue("URL is not expected", Utils.checkRegex(expectedUrl, webDriver.getCurrentUrl()));
 
         } catch (Exception e) {
             logger.error("Can not get url" + e);

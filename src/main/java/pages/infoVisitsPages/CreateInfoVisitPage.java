@@ -106,7 +106,7 @@ public class CreateInfoVisitPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/inspection-info-visit/create?temp_key=b7e554db-2813-4eb4-b5b9-ec5e20fd56da&planning_period_id=4");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection-info-visit/create?temp_key=b7e554db-2813-4eb4-b5b9-ec5e20fd56da&planning_period_id=4");
     }
 
     @Step

@@ -9,7 +9,7 @@ import parentPage.ParentPage;
 public class UpdateUserPage extends ParentPage {
 
     public UpdateUserPage(WebDriver webDriver) {
-        super(webDriver, "/user/update?id=7967");
+        super(webDriver, "/user/update?id=1833");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Оновити дані профілю')]")

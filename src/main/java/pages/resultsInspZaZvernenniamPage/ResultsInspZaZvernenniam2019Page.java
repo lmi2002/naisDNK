@@ -89,7 +89,7 @@ public class ResultsInspZaZvernenniam2019Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/index?planning_period_id=2");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/index?planning_period_id=2");
     }
 
 }

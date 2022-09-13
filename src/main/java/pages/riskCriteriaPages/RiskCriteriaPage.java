@@ -109,11 +109,11 @@ public class RiskCriteriaPage extends ParentPage {
     }
 
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/index?documentType=risk_criteria_document");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/index?documentType=risk_criteria_document");
     }
 
     public void checkIsPageURLProdPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/index?documentType=risk_criteria_document");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/index?documentType=risk_criteria_document");
     }
 
 }

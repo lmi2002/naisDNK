@@ -51,7 +51,7 @@ public class AccreditedOrganizationsPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/audit/accredited-organizations");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/audit/accredited-organizations");
     }
 
     @Step
