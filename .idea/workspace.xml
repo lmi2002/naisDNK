@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04957813-7910-4eba-9fb4-627949dcf99c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/pages/loginPages/LoginPage.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/audytTest/AudytTest.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="28U29eBRz2lbMoi6yCXgAo9GT63" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\v.anokhin\IdeaProjects\nais_IAS\src\main\java\resources" />
+      <recent name="C:\Users\v.anokhin\IdeaProjects\nais_IAS\src\main\java\data" />
+      <recent name="C:\Users\v.anokhin\IdeaProjects\nais_IAS\settings" />
+      <recent name="C:\Users\v.anokhin\IdeaProjects\nais_IAS\src\main\java" />
+      <recent name="C:\Users\v.anokhin\IdeaProjects\nais_IAS\settings\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pages.ratingInspectorsPages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TrainingMaterialTest.viewSearchResultTrainingMaterialTest">
+    <configuration name="DovidkaTest.viewDovidkaContentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nais_IAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dovidkaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dovidkaTest" />
+      <option name="MAIN_CLASS_NAME" value="dovidkaTest.DovidkaTest" />
+      <option name="METHOD_NAME" value="viewDovidkaContentTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegressionSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nais_IAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="suits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="suits" />
+      <option name="MAIN_CLASS_NAME" value="suits.RegressionSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainingMaterialTest.viewSearchResultTrainingMaterialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nais_IAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trainingMaterialTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="trainingMaterialTest" />
+      <option name="MAIN_CLASS_NAME" value="trainingMaterialTest.TrainingMaterialTest" />
+      <option name="METHOD_NAME" value="viewSearchResultTrainingMaterialTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZvitPoZahodahTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nais_IAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zvitnistTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="zvitnistTest" />
+      <option name="MAIN_CLASS_NAME" value="zvitnistTest.ZvitPoZahodahTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZvitProPorushenniaVymogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nais_IAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zvitnistTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="zvitnistTest" />
+      <option name="MAIN_CLASS_NAME" value="zvitnistTest.ZvitProPorushenniaVymogTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TrainingMaterialTest.viewSearchResultTrainingMaterialTest" />
+        <item itemvalue="JUnit.DovidkaTest.viewDovidkaContentTest" />
+        <item itemvalue="JUnit.RegressionSuite" />
+        <item itemvalue="JUnit.ZvitProPorushenniaVymogTest" />
+        <item itemvalue="JUnit.ZvitPoZahodahTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04957813-7910-4eba-9fb4-627949dcf99c" name="Changes" comment="" />
+      <created>1651256696694</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651256696694</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Add_auth_cross_key" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/target/test-classes/audytTest/AudytTest.class</url>
+          <line>20</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/zvitnistTest/RichnaZvitnistPoOrganuTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/trainingMaterialTest/TrainingMaterialTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nais_IAS$AudytTest_viewAkredytovaniOrgPageTest.ic" NAME="AudytTest.viewAkredytovaniOrgPageTest Coverage Results" MODIFIED="1658506138785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>audytTest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/nais_IAS$ReadingJSON.ic" NAME="ReadingJSON Coverage Results" MODIFIED="1658335056999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>libs.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/nais_IAS$CheckDateAndRiskChanges1Test_changeDateOfLastInspANDriskSt_TRO_1_Test.ic" NAME="CheckDateAndRiskChanges1Test.changeDateOfLastInspANDriskSt_TRO_1_Test Coverage Results" MODIFIED="1660830495081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>subjectsTest.*</FILTER>
+    </SUITE>
+  </component>
+</project>
