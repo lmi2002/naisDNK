@@ -28,7 +28,7 @@ public class ZvitPoZahodahPage extends ParentPage {
     @FindBy(xpath = ".//div/div[2]/div/div[3]/div[@class='table-responsive']")
     private WebElement gridBlockView;
 
-    @FindBy(xpath = ".//li[contains(text(),'Управління Держпраці у Вінницькій області')]")
+    @FindBy(xpath = ".//li[contains(text(),'Головне управління Держпродспоживслужби у Вінницькій області')]")
     private WebElement koItem;
 
     @FindBy(xpath = ".//span[@class='select2-results']//li[contains(text(),'За 2018 рік')]")
@@ -64,7 +64,7 @@ public class ZvitPoZahodahPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/report/activity");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/report/activity");
     }
 
     @Step

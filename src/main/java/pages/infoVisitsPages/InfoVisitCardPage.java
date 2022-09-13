@@ -1,6 +1,7 @@
 package pages.infoVisitsPages;
 
 import io.qameta.allure.Step;
+import libs.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,12 +51,15 @@ public class InfoVisitCardPage extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "ПРИВАТНЕ ПІДПРИЄМСТВО \"ЕНЕРГОСЕРВІС\"");
+        Assert.assertEquals(webDriver.getTitle(), "\"ВАП - БУД\"");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection-info-visit/view?id=565792");
+        // Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection-info-visit/view?id=565792");
+        String regex = configProperties.base_url() + "/inspection-info-visit/view\\?id=[0-9]*";
+        String str = webDriver.getCurrentUrl();
+        Assert.assertTrue(Utils.checkRegex(regex, str));
     }
 
     @Step

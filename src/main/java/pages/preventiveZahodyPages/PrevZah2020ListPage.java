@@ -72,7 +72,7 @@ public class PrevZah2020ListPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/preventive-measure/index?planning_period_id=4&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/index?planning_period_id=4&tab=main");
     }
 
     @Step

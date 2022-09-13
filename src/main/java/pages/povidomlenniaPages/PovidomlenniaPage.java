@@ -89,7 +89,7 @@ public class PovidomlenniaPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/notification/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/notification/index");
     }
 
     @Step

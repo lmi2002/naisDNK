@@ -1,11 +1,14 @@
 package pages.formyActivPerevirkyPages;
 
 import io.qameta.allure.Step;
+import libs.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import parentPage.ParentPage;
+
+import java.util.regex.Pattern;
 
 public class ViewTypeActInspCardPage extends ParentPage {
 
@@ -31,17 +34,21 @@ public class ViewTypeActInspCardPage extends ParentPage {
     @FindBy(xpath = ".//section[1]/div/div/div[2]/div/div/div/div[1]/div[3]")
     private WebElement blockPart3;
 
-    @FindBy(xpath = ".//*[@href='/document/view?id=866104&documentType=act_inspection_document&tab=list']")
+    @FindBy(xpath = ".//*[@href='/document/view?id=42&documentType=act_inspection_document&tab=list']")
     private WebElement perelikNPALink;
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Про затвердження уніфікованої форми акта, складеного за результатами проведення планового (позапланового) заходу державного нагляду (контролю) щодо дотримання суб'єктом господарювання вимог законодавства у сфері техногенної та пожежної безпеки, та інших форм розпорядчих документів");
+        // Assert.assertEquals(webDriver.getTitle(), "Про затвердження уніфікованої форми акта, складеного за результатами проведення планового (позапланового) заходу державного нагляду (контролю) щодо дотримання суб'єктом господарювання вимог законодавства у сфері техногенної та пожежної безпеки, та інших форм розпорядчих документів");
+        Assert.assertTrue(webDriver.getTitle().contains("Про затвердження уніфікованої форми акта"));
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/view?id=866104&documentType=act_inspection_document");
+        //Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/view?id=42&documentType=act_inspection_document");
+        String regex = configProperties.base_url() + "/document/view\\?id=[0-9]*&documentType=act_inspection_document";
+        String str = webDriver.getCurrentUrl();
+        Assert.assertTrue(Utils.checkRegex(regex, str));
     }
 
     @Step
@@ -99,6 +106,5 @@ public class ViewTypeActInspCardPage extends ParentPage {
     public void clickOnPerelikNPALink() {
         actionsWithOurElements.clickOnElement(perelikNPALink);
     }
-
 
 }

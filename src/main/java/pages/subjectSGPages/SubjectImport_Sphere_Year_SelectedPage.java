@@ -175,7 +175,7 @@ public class SubjectImport_Sphere_Year_SelectedPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject-import/import?type=1&regulator_id=262&sphere_id=136&planning_period_id=6");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject-import/import?type=1&regulator_id=262&sphere_id=136&planning_period_id=6");
     }
 
     @Step

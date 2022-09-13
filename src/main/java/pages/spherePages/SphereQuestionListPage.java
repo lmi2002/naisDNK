@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class SphereQuestionListPage extends ParentPage {
 
     public SphereQuestionListPage(WebDriver webDriver) {
-        super(webDriver, "/sphere/view?id=124&tab=question");
+        super(webDriver, "/sphere/view?id=217&tab=question");
     }
 
     @FindBy(xpath = ".//nav/div/div/div[1]/div/a/img")
@@ -38,12 +38,12 @@ public class SphereQuestionListPage extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Будівництво об’єктів, що за класом наслідків (відповідальності) належать до об’єктів з середнім (СС2) та значними (СС3) наслідками, що підлягає ліцензуванню");
+        Assert.assertEquals(webDriver.getTitle(), "Безпечність та окремі показники якості харчових продуктів");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/sphere/view?id=124&tab=question");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/sphere/view?id=217&tab=question");
     }
 
     @Step

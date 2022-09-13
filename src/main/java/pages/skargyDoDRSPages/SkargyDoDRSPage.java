@@ -58,7 +58,7 @@ public class SkargyDoDRSPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/view/complaints?subject_id=15076");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/view/complaints?subject_id=15076");
     }
 
     @Step

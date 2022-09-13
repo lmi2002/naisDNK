@@ -1,7 +1,10 @@
 package loginTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -14,7 +17,7 @@ import java.util.Collection;
 @Feature("Login success Test")
 
 @RunWith(Parameterized.class)
-
+@Ignore("Нужно переписывать автотесты")
 public class LoginTest extends AbstractParentTest {
     String login, pass;
 
@@ -35,7 +38,7 @@ public class LoginTest extends AbstractParentTest {
 
     @Description("Some detailed test description")
     @Story("Authorization")
-    @Link("https://inspections.test.nais.gov.ua/")
+    @Link("https://inspections.test.nais.gov.ua" + "/")
     @Link(name = "allure", type = "oper@mns.gov.ua")
     @Issue("DEV-")
     @Issue("DEV-")

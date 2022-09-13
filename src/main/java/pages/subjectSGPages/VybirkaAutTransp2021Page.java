@@ -40,11 +40,16 @@ public class VybirkaAutTransp2021Page extends ParentPage {
     @FindBy(xpath = ".//*[@id='w3']/table/tbody/tr/td[8]")
     private WebElement zagBal3;
 
-    @FindBy(xpath = ".//*[@id='w3']/table/tbody/tr/td[10]/div/a")
+    @FindBy(xpath = "//a[@class='btn-open-inspector-cart']")
     private WebElement sgMenu;
 
-    @FindBy(xpath = ".//*[@id='w3']/table/tbody/tr/td[10]/div/ul/li[3]/a")
+    @FindBy(xpath = "//*[@id=\"w3\"]/table/tbody/tr[1]/td[11]/div/ul/li[3]/a")
     private WebElement editSGLink;
+
+    @FindBy(xpath = "//input[@name='SubjectSearch[code]']")
+    private WebElement searchSGByCodeField;
+
+
 
 
 
@@ -75,7 +80,7 @@ public class VybirkaAutTransp2021Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/index?regulatorId=262&planningPeriodId=6&sphereId=162&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/index?regulatorId=205&planningPeriodId=6&sphereId=94&tab=main");
     }
 
     @Step
@@ -142,6 +147,10 @@ public class VybirkaAutTransp2021Page extends ParentPage {
     public void clickOnEditSGLink() {
         actionsWithOurElements.clickOnElement(editSGLink);
         logger.info("Element -EditSGLink- was clicked");
+    }
+
+    public void enterSGCodeInToSearchField(String sgCode) {
+        actionsWithOurElements.enterTextInInput(searchSGByCodeField, sgCode);
     }
 
 

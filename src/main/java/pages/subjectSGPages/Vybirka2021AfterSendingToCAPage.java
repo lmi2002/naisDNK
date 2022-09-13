@@ -97,7 +97,7 @@ public class Vybirka2021AfterSendingToCAPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/plan-project-inspection/index?planning_period_id=6&regulator_id=262");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/plan-project-inspection/index?planning_period_id=6&regulator_id=262");
     }
 
     @Step

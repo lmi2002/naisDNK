@@ -56,4 +56,9 @@ public class TypeActInspSearchResultPage extends ParentPage {
         return actionsWithOurElements.isElementDisplayed(gridSearchListElements);
     }
 
+    @Step
+    public void waiting() throws InterruptedException {
+        actionsWithOurElements.pause();
+    }
+
 }

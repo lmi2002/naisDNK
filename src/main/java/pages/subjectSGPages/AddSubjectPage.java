@@ -60,7 +60,7 @@ public class AddSubjectPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/subject/add?tab=main&sphereId=136&regulatorId=262&planningPeriodId=6");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/subject/add?tab=main&sphereId=93&regulatorId=205&planningPeriodId=6");
     }
 
     @Step

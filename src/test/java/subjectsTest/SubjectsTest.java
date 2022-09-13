@@ -2,21 +2,30 @@ package subjectsTest;
 
 import abstractParentTest.AbstractParentTest;
 import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
-public class SubjectsTest extends AbstractParentTest {
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
+public class SubjectsTest extends AbstractParentTest {
     private final String objectName = "Цех" + Utils.getDateAndTimeFormated();
 
     @Before
     public void preconditions() {
+        String role = "officialPersonTPO";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("iastestuser1_tro", "123007");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnSubyektyGosp();
     }
+
 
     @Test
     public void addSubjectTest() {
@@ -39,7 +48,7 @@ public class SubjectsTest extends AbstractParentTest {
     }
 
     @Test
-    public void updateObjectTest() {
+    public void updateObjectTest() throws InterruptedException {
         subjectsListPage.clickOnAddSGBtn();
         addSubjectPage.checkIsPageTitlePresent();
         addSubjectPage.inputEdrpouCodeInToInputField("35081565");
@@ -163,7 +172,6 @@ public class SubjectsTest extends AbstractParentTest {
 
     @Test
     public void viewIstoriyaZminSGTabTest() {
-
         subjectsListPage.inputEdrpouCodeInToInputField("35081565" + "\n");
         searchResultSubjectPage.clickOnViewCardSGLink();
         viewDosyeSubjectPage.checkIsPageURLPresent();
@@ -186,6 +194,7 @@ public class SubjectsTest extends AbstractParentTest {
         viewLicenseSubjectPage.checkIsLicenseTitlePresent();
     }
 
+    @Ignore("Функционал отсутствуе")
     @Test
     public void viewImportSGPageTest() {
         subjectsListPage.clickOnImportBtn();
@@ -201,6 +210,7 @@ public class SubjectsTest extends AbstractParentTest {
         subjectImportPage.checkIsAdministruvanniaBlockPresent();
     }
 
+    @Ignore("Функционал отсутствуе")
     @Test
     public void viewImportSGPageWith_Sphere_Test() {
         subjectsListPage.clickOnImportBtn();
@@ -216,6 +226,7 @@ public class SubjectsTest extends AbstractParentTest {
         subjectImport_sphere_selectedPage.checkIsAddFileBtnPresent();
     }
 
+    @Ignore("Функционал отсутствуе")
     @Test
     public void viewImportSGPageWith_Sphere_Year_Test() {
         subjectsListPage.clickOnImportBtn();

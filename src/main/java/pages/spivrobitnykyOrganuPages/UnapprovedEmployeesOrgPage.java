@@ -118,7 +118,7 @@ public class UnapprovedEmployeesOrgPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/user/index?tab=declined&sub=0");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/user/index?tab=declined&sub=0");
     }
 
     @Step

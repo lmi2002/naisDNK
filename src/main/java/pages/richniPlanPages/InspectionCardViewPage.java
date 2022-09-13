@@ -40,7 +40,7 @@ public class InspectionCardViewPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/inspection/view?id=1469155");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/view?id=1469155");
     }
 
     @Step

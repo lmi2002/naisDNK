@@ -137,7 +137,7 @@ public class SubjectImportPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject-import/import?type=1");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject-import/import?type=1");
     }
 
 }

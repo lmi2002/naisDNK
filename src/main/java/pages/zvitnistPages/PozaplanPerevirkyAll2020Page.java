@@ -11,7 +11,7 @@ public class PozaplanPerevirkyAll2020Page extends ParentPage {
 
 
     public PozaplanPerevirkyAll2020Page(WebDriver webDriver) {
-        super(webDriver, "/report/unplanned-general?regulator_id=61&planning_period_id=4");
+        super(webDriver, "/report/unplanned-general?regulator_id=34&planning_period_id=4");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Позапланові перевірки (загальні дані)')]")

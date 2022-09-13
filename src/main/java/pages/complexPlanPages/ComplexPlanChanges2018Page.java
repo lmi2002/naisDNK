@@ -52,7 +52,7 @@ public class ComplexPlanChanges2018Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/complex-plan-change/index?complex_plan_id=65");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/complex-plan-change/index?complex_plan_id=65");
     }
 
     @Step

@@ -154,7 +154,7 @@ public class PlanuvanniaPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/planning-period/index");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/planning-period/index");
     }
 
     @Step

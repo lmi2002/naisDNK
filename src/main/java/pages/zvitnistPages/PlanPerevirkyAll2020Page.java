@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class PlanPerevirkyAll2020Page extends ParentPage {
 
     public PlanPerevirkyAll2020Page(WebDriver webDriver) {
-        super(webDriver, "/report/plan-general?regulator_id=61&planning_period_id=4");
+        super(webDriver, "/report/plan-general?regulator_id=34&planning_period_id=4");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Планові перевірки (загальні дані)')]")
@@ -25,13 +25,13 @@ public class PlanPerevirkyAll2020Page extends ParentPage {
     @FindBy(xpath = ".//b[(text()) and contains(text(),'1-')]")
     private WebElement gridListElements;
 
-    @FindBy(xpath = ".//a[@href='/report/plan-violations?regulator_id=61&planning_period_id=4']")
+    @FindBy(xpath = ".//a[@href='/report/plan-violations?regulator_id=34&planning_period_id=4']")
     private WebElement planPerevirkyPorushenniaLink;
 
-    @FindBy(xpath = ".//a[@href='/report/unplanned-general?regulator_id=61&planning_period_id=4']")
+    @FindBy(xpath = ".//a[@href='/report/unplanned-general?regulator_id=34&planning_period_id=4']")
     private WebElement pozaplanPerevirkyAllLink;
 
-    @FindBy(xpath = ".//a[@href='/report/unplanned-violations?regulator_id=61&planning_period_id=4']")
+    @FindBy(xpath = ".//a[@href='/report/unplanned-violations?regulator_id=34&planning_period_id=4']")
     private WebElement pozaplanPerevirkyPorushenniaLink;
 
     @Step

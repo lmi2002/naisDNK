@@ -10,7 +10,7 @@ import parentPage.ParentPage;
 public class SphereCardPage extends ParentPage {
 
     public SphereCardPage(WebDriver webDriver) {
-        super(webDriver, "/sphere/view?id=124");
+        super(webDriver, "/sphere/view?id=217");
     }
 
     @FindBy(xpath = ".//nav/div/div/div[1]/div/a/img")
@@ -25,16 +25,16 @@ public class SphereCardPage extends ParentPage {
     @FindBy(xpath = ".//div[@class='common-info']")
     private WebElement infoBlock;
 
-    @FindBy(xpath = ".//a[@href='/sphere/view?id=124&tab=criteria']")
+    @FindBy(xpath = ".//a[@href='/sphere/view?id=217&tab=criteria']")
     private WebElement criteriaItem;
 
-    @FindBy(xpath = ".//a[@href='/sphere/view?id=124&tab=question']")
+    @FindBy(xpath = ".//a[@href='/sphere/view?id=217&tab=question']")
     private WebElement questionListItem;
 
-    @FindBy(xpath = ".//a[@href='/sphere/view?id=124&tab=requirements']")
+    @FindBy(xpath = ".//a[@href='/sphere/view?id=217&tab=requirements']")
     private WebElement vymogyItem;
 
-    @FindBy(xpath = ".//a[@href='/sphere/view?id=124&tab=npa']")
+    @FindBy(xpath = ".//a[@href='/sphere/view?id=217&tab=npa']")
     private WebElement perelikNPAItem;
 
 
@@ -50,12 +50,12 @@ public class SphereCardPage extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "Будівництво об’єктів, що за класом наслідків (відповідальності) належать до об’єктів з середнім (СС2) та значними (СС3) наслідками, що підлягає ліцензуванню");
+        Assert.assertEquals(webDriver.getTitle(), "Безпечність та окремі показники якості харчових продуктів");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/sphere/view?id=124");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/sphere/view?id=217");
     }
 
     @Step

@@ -1,6 +1,8 @@
 package formyActInspTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,9 +11,14 @@ public class FormyActInspTest extends AbstractParentTest {
 
     @Before
     public void preconditions() {
+        String role = "adminCA";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("oper@mns.gov.ua", "123456789");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnDovidnyky();
         mainPage.mainMenu.clickOnFormyAktiv();
     }
@@ -27,18 +34,21 @@ public class FormyActInspTest extends AbstractParentTest {
     }
 
     @Test
-    public void viewTypeActInspSearchResultTest() {
+    public void viewTypeActInspSearchResultTest() throws InterruptedException {
         typeActInspPage.enterNPANameInToSearchField("Про затвердження уніфікованої форми акта,");
         typeActInspPage.searchBtnIsDisplayed();
         typeActInspPage.clickOnSearchBtn();
+        typeActInspSearchResult.waiting();
         typeActInspSearchResult.pageTitleIsDisplayed();
         typeActInspSearchResult.gridSearchListElementsIsDisplayed();
         typeActInspSearchResult.gridElementIsDisplayed();
     }
 
     @Test
-    public void viewTypeActInspCardTest() {
-        typeActInspPage.enterNPANameInToSearchField("Про затвердження уніфікованої форми акта,");
+    public void viewTypeActInspCardTest() throws InterruptedException {
+        typeActInspPage.enterNPANameInToSearchField("Про затвердження уніфікованої форми акта");
+        typeActInspPage.clickOnSearchBtn();
+        typeActInspSearchResult.waiting();
         typeActInspSearchResult.clickOnViewCardBtn();
         viewTypeActInspCardPage.checkIsPageURLPresent();
         viewTypeActInspCardPage.checkIsPageTitlePresent();
@@ -50,9 +60,10 @@ public class FormyActInspTest extends AbstractParentTest {
     }
 
     @Test
-    public void viewTypeActInspListNPATest() {
+    public void viewTypeActInspListNPATest() throws InterruptedException {
         typeActInspPage.enterNPANameInToSearchField("Про затвердження Положення про організацію та здійснення державного гірничого нагляду,");
         typeActInspSearchResult.clickOnViewCardBtn();
+        typeActInspSearchResult.waiting();
         viewTypeActInspCardPage.clickOnPerelikNPALink();
         viewTypeActInspListNPAPage.checkIsPageURLPresent();
         viewTypeActInspListNPAPage.checkIsPageTitlePresent();
@@ -67,9 +78,10 @@ public class FormyActInspTest extends AbstractParentTest {
     }
 
     @Test
-    public void viewTypeActInspListQuestionsTest() {
+    public void viewTypeActInspListQuestionsTest() throws InterruptedException {
         typeActInspPage.enterNPANameInToSearchField("Про затвердження Положення про організацію та здійснення державного гірничого нагляду,");
         typeActInspSearchResult.clickOnViewCardBtn();
+        typeActInspSearchResult.waiting();
         viewTypeActInspCardPage.clickOnPerelikNPALink();
         viewTypeActInspListNPAPage.clickOnPerelikQuestionsLink();
         viewTypeActInspQuestionsPage.checkIsPageURLPresent();

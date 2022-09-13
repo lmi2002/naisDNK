@@ -1,16 +1,25 @@
 package spivrobitnykyPidprOrganivTest;
 
 import abstractParentTest.AbstractParentTest;
+import libs.Utils;
+import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore ("Узнать роль где есть Співробітники підпорядкованих органів")
 public class SpivrobitnykyPidprOrganivTest extends AbstractParentTest {
 
     @Before
     public void preconditions() {
+        String role = "adminCA";
+        JSONObject personData = Utils.getUserPersonData(configProperties.USERS_FILE_PATH(), role);
+        String pathToKey = (String) personData.get("pathToKey");
+        String absolute = Utils.getAbsolutePathToKey(pathToKey);
+
         mainNotAuthPage.openPage();
         mainNotAuthPage.clickOnUviyty();
-        loginPage.fillingLoginFormAndSubmitIt("d.beztuzhev", "123007");
+        loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnMenuKorystuvacha();
         mainPage.mainMenu.clickOnSpivrobitnyPidporydkovanyhOrganiv();
     }

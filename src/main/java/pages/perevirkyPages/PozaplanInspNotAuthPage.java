@@ -48,7 +48,7 @@ public class PozaplanInspNotAuthPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/all-unplanned");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/all-unplanned");
     }
 
     @Step

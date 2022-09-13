@@ -103,12 +103,12 @@ public class TypeActInspPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/index?documentType=act_inspection_document");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/index?documentType=act_inspection_document");
     }
 
     @Step
     public void checkIsPageURLProdPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/document/index?documentType=act_inspection_document");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/document/index?documentType=act_inspection_document");
     }
 
 

@@ -22,40 +22,40 @@ public class ReportPlanningPeriodsPagePage extends ParentPage {
     @FindBy(xpath = ".//b[(text()) and contains(text(),'1-')]")
     private WebElement gridListElements;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=7']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=7']")
     private WebElement report2015link;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=5']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=5']")
     private WebElement report2016link;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=3']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=3']")
     private WebElement report2017link;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=1']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=1']")
     private WebElement report2018link;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=2']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=2']")
     private WebElement report2019link;
 
-    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=61&planning_period_id=4']")
+    @FindBy(xpath = ".//a[@href= '/report/planned?regulator_id=34&planning_period_id=4']")
     private WebElement report2020link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=7']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=7']")
     private WebElement reportInfo2015link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=5']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=5']")
     private WebElement reportInfo2016link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=3']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=3']")
     private WebElement reportInfo2017link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=1']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=1']")
     private WebElement reportInfo2018link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=2']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=2']")
     private WebElement reportInfo2019link;
 
-    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=61&planning_period_id=4']")
+    @FindBy(xpath = ".//a[@href= '/report/plan-general?regulator_id=34&planning_period_id=4']")
     private WebElement reportInfo2020link;
 
     @Step

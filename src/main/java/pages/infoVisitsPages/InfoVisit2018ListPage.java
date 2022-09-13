@@ -59,7 +59,7 @@ public class InfoVisit2018ListPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection-info-visit/index?planning_period_id=1");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection-info-visit/index?planning_period_id=1");
     }
 
     @Step

@@ -9,7 +9,7 @@ import parentPage.ParentPage;
 public class YearSelectForVyborkaPage extends ParentPage {
 
     public YearSelectForVyborkaPage (WebDriver webDriver) {
-        super(webDriver, "/subject/index?regulatorId=262&planningPeriodId=6&sphereId=136&tab=main");
+        super(webDriver, "/subject/index?regulatorId=205&planningPeriodId=6&sphereId=93&tab=main");
     }
 
     @FindBy(xpath = ".//h1[@class='page_title' and contains(text(),'Вибірка суб')]")

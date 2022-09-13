@@ -73,12 +73,12 @@ public class ViewDosyeSubjectPage extends ParentPage {
 
     @Step
     public void checkIsPageTitlePresent() {
-        Assert.assertEquals(webDriver.getTitle(), "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"РЕНТАЛ ГРУП\"");
+        Assert.assertEquals(webDriver.getTitle(), "\"РЕНТАЛ ГРУП\"");
     }
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/view/about?subject_id=15076");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/view/about?subject_id=15076");
     }
 
     @Step

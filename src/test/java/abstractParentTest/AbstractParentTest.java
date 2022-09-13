@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import libs.ConfigProperties;
+import libs.Utils;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.junit.*;
@@ -13,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import pages.analitykaPages.AnalitykaPage;
@@ -303,22 +305,24 @@ public class AbstractParentTest {
 
     protected static ConfigProperties configProperties =
             ConfigFactory.create(ConfigProperties.class);
-
     protected Logger logger = Logger.getLogger(getClass());
 
     //installation of configuration settings
     @BeforeClass
     public static void configuration() {
-        // Configuration.baseUrl = "http://inspections.staging.brdo.com.ua";
-        Configuration.baseUrl = "https://inspections.test.nais.gov.ua";
+        Configuration.baseUrl = configProperties.base_url();
         Configuration.browser = "chrome";
     }
 
     @Before
     public void setUp() throws Exception {
         webDriver = driverInit();
-        webDriver.manage().window().maximize();
+        if(!configProperties.JENKINS_HOST().equalsIgnoreCase(Utils.getIPAdress())) {
+            webDriver.manage().window().maximize();
+            logger.info("Local " + Utils.getIPAdress());
+        }
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        logger.info(webDriver.manage().window().getSize());
 
         loginPage = new LoginPage(webDriver);
         mainNotAuthPage = new MainNotAuthPage(webDriver);
@@ -569,7 +573,16 @@ public class AbstractParentTest {
         String browser = System.getProperty("browser");
         if ((browser == null) || ("chrome".equalsIgnoreCase(browser))) {
             WebDriverManager.chromedriver().setup();
-            return new ChromeDriver();
+            if (configProperties.JENKINS_HOST().equalsIgnoreCase(Utils.getIPAdress())) {
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("window-size=1920,1080");
+                options.addArguments("headless");
+                logger.info("Jenkins " + Utils.getIPAdress());
+                return new ChromeDriver(options);
+            }
+            else {
+                return new ChromeDriver();
+            }
         } else if ("firefox".equalsIgnoreCase(browser)) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();

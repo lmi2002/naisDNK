@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class ViewUserPage extends ParentPage {
 
     public ViewUserPage(WebDriver webDriver) {
-        super(webDriver, "/user/view?id=7967");
+        super(webDriver, "/user/view?id=1833");
     }
 
     @FindBy(xpath = ".//div[@class='inspector-ava']")
@@ -24,7 +24,7 @@ public class ViewUserPage extends ParentPage {
     @FindBy(css = "a.btn-open-inspector-cart")
     private WebElement btnInspectorMenu;
 
-    @FindBy(xpath = ".//*[@href='/user/update?id=7967']//i[@class='icon-pencil']")
+    @FindBy(xpath = ".//*[@href='/user/update?id=1833']//i[@class='icon-pencil']")
     private WebElement iconUpdate;
 
     @FindBy(xpath = ".//button[@class='close_modal icon-cancel']")
@@ -45,7 +45,7 @@ public class ViewUserPage extends ParentPage {
     @FindBy(xpath = ".//div[@class='bbody']//a[contains(text(),'+380952222222')]")
     private WebElement phoneInCardIsTrue;
 
-    @FindBy(xpath = ".//a[@class='btn btn-primary btn-block' and @href='/user/update?id=7967']")
+    @FindBy(xpath = ".//a[@class='btn btn-primary btn-block' and @href='/user/update?id=1833']")
     private WebElement btnUpdateFromUserCard;
 
     @FindBy(xpath = ".//i[@class='icon-close']")
@@ -89,7 +89,7 @@ public class ViewUserPage extends ParentPage {
 
     @Step
     public void updatedEmailIsTrue() {
-        Assert.assertTrue("Updated Email is not displayed", webDriver.getPageSource().contains("d.beztuzhev12@brdo.com.ua"));
+        Assert.assertTrue("Updated Email is not displayed", webDriver.getPageSource().contains("d.beztuzhev@brdo.com.ua"));
     }
 
     @Step
@@ -99,7 +99,7 @@ public class ViewUserPage extends ParentPage {
 
     @Step
     public void updatedEmailInCardIsTrue() {
-        Assert.assertTrue("Updated Email in Cart is not displayed", webDriver.getPageSource().contains("d.beztuzhev12@brdo.com.ua"));
+        Assert.assertTrue("Updated Email in Cart is not displayed", webDriver.getPageSource().contains("d.beztuzhev@brdo.com.ua"));
     }
 
     @Step
@@ -114,12 +114,12 @@ public class ViewUserPage extends ParentPage {
 
     @Step
     public void checkEmailInCard() {
-        Assert.assertTrue("Email in Cart is not displayed", webDriver.getPageSource().contains("d.beztuzhev@brdo.com.ua"));
+        Assert.assertTrue("Email in Cart is not displayed", webDriver.getPageSource().contains("chervan@vingudpss.gov.ua"));
     }
 
     @Step
     public void checkPhoneInCard() {
-        Assert.assertTrue("Phone number in Cart is not displayed", webDriver.getPageSource().contains("+380952225555"));
+        Assert.assertTrue("Phone number in Cart is not displayed", webDriver.getPageSource().contains("+380432658811"));
     }
 
     @Step

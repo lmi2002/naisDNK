@@ -66,7 +66,7 @@ public class SearchResultInfoVisitPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection-info-visit/index?InspectionInfoVisitSearch%5Bname%5D=&InspectionInfoVisitSearch%5Bcode%5D=19393752&InspectionInfoVisitSearch%5Bbrand_name%5D=&InspectionInfoVisitSearch%5Blocation%5D=&InspectionInfoVisitSearch%5Bsls_activity_type_id%5D=&InspectionInfoVisitSearch%5Bdate%5D=&InspectionInfoVisitSearch%5Bstatus%5D=&InspectionInfoVisitSearch%5Bsphere_id%5D=&InspectionInfoVisitSearch%5Bregulator_id%5D=&planning_period_id=7");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection-info-visit/index?InspectionInfoVisitSearch%5Bname%5D=&InspectionInfoVisitSearch%5Bcode%5D=30356126&InspectionInfoVisitSearch%5Bbrand_name%5D=&InspectionInfoVisitSearch%5Blocation%5D=&InspectionInfoVisitSearch%5Bsls_activity_type_id%5D=&InspectionInfoVisitSearch%5Bdate%5D=&InspectionInfoVisitSearch%5Bstatus%5D=&InspectionInfoVisitSearch%5Bsphere_id%5D=&InspectionInfoVisitSearch%5Bregulator_id%5D=&planning_period_id=7");
     }
 
     @Step

@@ -42,7 +42,7 @@ public class ViewRegulatorCardPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/regulator/view?id=5");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/regulator/view?id=5");
     }
 
     @Step

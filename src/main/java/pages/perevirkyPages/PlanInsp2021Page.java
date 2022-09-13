@@ -43,7 +43,7 @@ import parentPage.ParentPage;
 
         @Step
         public void checkIsPageURLPresent() {
-            Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/planned?planningPeriodId=6&tab=simple");
+            Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/planned?planningPeriodId=6&tab=simple");
         }
 
         @Step

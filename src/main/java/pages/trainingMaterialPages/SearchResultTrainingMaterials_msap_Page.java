@@ -82,7 +82,7 @@ public class SearchResultTrainingMaterials_msap_Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua//training-material/index?TrainingMaterialSearch%5Bname%5D=мсап&TrainingMaterialSearch%5Bregulator_id%5D=&TrainingMaterialSearch%5Bsphere_id%5D=&TrainingMaterialSearch%5Bupdated_at%5D=");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "//training-material/index?TrainingMaterialSearch%5Bname%5D=мсап&TrainingMaterialSearch%5Bregulator_id%5D=&TrainingMaterialSearch%5Bsphere_id%5D=&TrainingMaterialSearch%5Bupdated_at%5D=");
     }
 
     @Step

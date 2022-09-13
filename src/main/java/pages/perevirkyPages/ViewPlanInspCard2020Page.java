@@ -62,7 +62,7 @@ public class ViewPlanInspCard2020Page extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/inspection/view?id=2956037");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/inspection/view?id=2956037");
     }
 
     @Step

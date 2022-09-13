@@ -42,7 +42,7 @@ public class SearchResultSubjectPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "http://inspections.staging.brdo.com.ua/subject/index?SubjectSearch%5Bfull_name%5D=&SubjectSearch%5Bcode%5D=35081565&SubjectSearch%5Blocation%5D=&SubjectSearch%5Bstatus%5D=&regulatorId=262");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/subject/index?SubjectSearch%5Bfull_name%5D=&SubjectSearch%5Bcode%5D=35081565&SubjectSearch%5Blocation%5D=&SubjectSearch%5Bstatus%5D=&regulatorId=205");
     }
 
     @Step

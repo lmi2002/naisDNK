@@ -76,7 +76,7 @@ public class PrevZah2018ListPage extends ParentPage {
 
     @Step
     public void checkIsPageURLPresent() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://inspections.test.nais.gov.ua/preventive-measure/index?planning_period_id=1&tab=main");
+        Assert.assertEquals(webDriver.getCurrentUrl(), configProperties.base_url() + "/preventive-measure/index?planning_period_id=1&tab=main");
     }
 
     @Step

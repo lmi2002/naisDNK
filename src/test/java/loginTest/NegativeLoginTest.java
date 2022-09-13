@@ -3,18 +3,19 @@ package loginTest;
 import abstractParentTest.AbstractParentTest;
 import io.qameta.allure.*;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 @Epic("IAS Test Reports")
 @Feature("LogOn negative tests")
-
+@Ignore("Нужно переписывать автотесты")
 public class NegativeLoginTest extends AbstractParentTest {
 
     // negative tests
 
     @Description("Some detailed test description")
     @Story("Authorization")
-    @Link("http://inspections.staging.brdo.com.ua")
+    @Link("https://inspections.test.nais.gov.ua" + "/")
     @Link(name = "allure", type = "mylink")
     @Issue("123")
     @Issue("432")
