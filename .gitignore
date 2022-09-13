@@ -1,0 +1,5 @@
+settings/
+.idea
+log/
+target
+src/main/java/data/
