@@ -1,4 +1,4 @@
-package requestPasswordResetPROD;
+package requestPasswordReset;
 
 import abstractParentTest.AbstractParentTest;
 import com.codeborne.selenide.junit.ScreenShooter;
@@ -13,8 +13,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-@Ignore("Прод. Не делаем проверку")
-public class RequestPasswordResetPROD extends AbstractParentTest {
+public class RequestPasswordReset extends AbstractParentTest {
     protected Logger logger = Logger.getLogger(getClass());
 
     @Rule
@@ -24,7 +23,7 @@ public class RequestPasswordResetPROD extends AbstractParentTest {
 
     @Before
     public void preconditions() {
-        open("https://inspections.gov.ua/site/request-password-reset");
+        open("https://inspections.test.nais.gov.ua/site/request-password-reset");
     }
 
         @Test

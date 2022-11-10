@@ -1,13 +1,10 @@
 package suits;
 
 
-import audytTest.AudytTest;
 import complexPlanTest.ComplexPlanTest;
 import dovidkaTest.DovidkaTest;
 import formyActInspTest.FormyActInspTest;
 import infoVisitsTest.InfoVisitsTest;
-import loginTest.LoginTest;
-import loginTest.NegativeLoginTest;
 import openPagesFromMenuNotAuthTest.OpenPagesFromMenuNotAuthTest;
 import openPagesFromMenuPRODTest.OpenPagesFromMenuPRODTest;
 import org.junit.runner.RunWith;
@@ -20,22 +17,19 @@ import preventiveZahodyTest.PreventiveZahodyTest;
 import ratingInspectorsTest.RatingInspectorsTest;
 import ratingSGTest.RatingSGTest;
 import regulatorTest.RegulatorTest;
-import requestPasswordResetPROD.RequestPasswordResetPROD;
+import requestPasswordReset.RequestPasswordReset;
 import resultsInspZaZvernenniam.ResultsInspZaZvernenniam;
 import richniPlanTest.RichniPlanTest;
 import richniPlanTest.ViewZminyDoRichnogoPlanTest;
 import riskCriteriaTest.RiskCriteriaTest;
 import searchOnMainPageTest.SearchOnMainPageComplexInspTest;
 import searchOnMainPageTest.SearchOnMainPageRichniInspTest;
-import skargyDoDRSTest.SkargyDoDRSTest;
 import sphereTest.SphereTest;
 import spivrobitnykyOrganuTest.SpivrobitnykyOrganuTest;
-import spivrobitnykyPidprOrganivTest.SpivrobitnykyPidprOrganivTest;
 import storinkaOrganuSubMenuTest.StorinkaOrganuSubMenuTest;
 import subjectsTest.*;
 import trainingMaterialTest.TrainingMaterialTest;
 import updateUserTest.UpdateUserTest;
-import uzgodzhenniaDatePageTest.UzgodzhenniaDatePageTest;
 import vyhidTest.VyhidTest;
 import zakonodavstvoTest.ZakonodavstvoTest;
 import zvitnistTest.RichnaZvitnistPoOrganuTest;
@@ -66,7 +60,7 @@ import zvitnistTest.ZvitProPorushenniaVymogTest;
                 RatingInspectorsTest.class,
                 RatingSGTest.class,
                 RegulatorTest.class,
-                // RequestPasswordResetPROD.class,
+                RequestPasswordReset.class,
                 ResultsInspZaZvernenniam.class,
                 RichniPlanTest.class,
                 ViewZminyDoRichnogoPlanTest.class,

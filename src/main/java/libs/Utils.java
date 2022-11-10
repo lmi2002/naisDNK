@@ -45,11 +45,12 @@ public class Utils {
     /**
      * Hard wait
      *
-     * @param second
+     * @param millis
+     * 1000 millis = 1 sec
      */
-    public static void waitABit(int second) {
+    public static void waitABit(int millis) {
         try {
-            Thread.sleep(second);
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

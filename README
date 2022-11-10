@@ -46,3 +46,9 @@ resource->compile->process-classes->process-test-resources->test-compile->test->
 компилятор: testCompile компилирует тестовый класс (включая копирование файлов ресурсов)
 surefire: тестовый запуск тестовых случаев
 jar: jar jar package
+
+ERROR:
+Connected to the target VM, address: '127.0.0.1:64722', transport: 'socket'
+Exception in thread "main" java.lang.ClassCircularityError: java/lang/WeakPairMap$Pair$Weak
+FIX:
+Please try to disable the async stack traces agent in "Settings | Build, Execution, Deployment | Debugger | Async Stack Traces"
