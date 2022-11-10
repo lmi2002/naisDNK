@@ -100,7 +100,7 @@ public class ActionsWithOurElements {
     public void moveAndClickOnElement(WebElement webElement) {
         try {
             Actions action = new Actions(webDriver);
-            action.moveToElement(webElement).click().perform();
+            action.moveToElement(webElement).click().build().perform();
             logger.info("Element was clicked");
         } catch (Exception e) {
             stopTestAndPrintMessage();

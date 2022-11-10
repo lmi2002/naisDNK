@@ -35,7 +35,7 @@ public class PerevirkyTest extends AbstractParentTest {
         planInspPage.viewInspCardBtnIsDisplayed();
         planInspPage.updateInspBtnIsDisplayed();
         planInspPage.downloadInspBtnIsDisplayed();
-        planInspPage.goToArchiveInspBtnIsDisplayed();
+        // planInspPage.goToArchiveInspBtnIsDisplayed(); Для планових перевірок такого функціоналу немає
     }
 
     @Test

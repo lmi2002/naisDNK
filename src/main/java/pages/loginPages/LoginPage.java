@@ -127,7 +127,8 @@ public class LoginPage extends ParentPage {
 
     @Step
     public void enterPassInToInputPasswordKey(String passwdKey) {
-        actionsWithOurElements.enterTextInInput(inputPasswordKey, passwdKey); }
+        actionsWithOurElements.enterTextInInput(inputPasswordKey, passwdKey);
+    }
 
 
     @Step
@@ -189,13 +190,13 @@ public class LoginPage extends ParentPage {
     public void extFillingLoginFormAndSubmit(String login, String passwd, String code, String path, String passwdKey) {
         enterLoginInToInputLogin(login);
         enterPassInToInputPassword(passwd);
-        enterPassInToInputRNOKPP(code);
+        //enterPassInToInputRNOKPP(code);
         clickOnfieldCertificationCenter();
         scrollToResultCertificationCenter();
         clickOnResultCertificationCenter();
         enterPassInToInputFile(path);
         enterPassInToInputPasswordKey(passwdKey);
-        Utils.waitABit(5);
+        Utils.waitABit(5000);
         clickOnButtonLogIn();
    }
 

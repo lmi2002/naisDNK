@@ -1,41 +1,10 @@
 package suits;
 
 
-import analitykaTest.AnalitykaTest;
-import complexPlanTest.ComplexPlanTest;
 import dovidkaTest.DovidkaTest;
-import formyActInspTest.FormyActInspTest;
-import infoVisitsTest.InfoVisitsTest;
-import loginTest.LoginTest;
-import loginTest.NegativeLoginTest;
-import openPagesFromMenuNotAuthTest.OpenPagesFromMenuNotAuthTest;
-import openPagesFromMenuPRODTest.OpenPagesFromMenuPRODTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import perevirkyListNotAuthTest.PerevirkyListNotAuthTest;
-import perevirkyTest.PerevirkyTest;
-import planuvanniaTest.PlanuvanniaTest;
-import preventiveZahodyTest.PreventiveZahodyTest;
-import ratingInspectorsTest.RatingInspectorsTest;
-import ratingSGTest.RatingSGTest;
-import regulatorTest.RegulatorTest;
-import requestPasswordResetPROD.RequestPasswordResetPROD;
 //import resultsInspZaZvernenniam.ResultsInspZaZvernenniam;
-import richniPlanTest.RichniPlanTest;
-import riskCriteriaTest.RiskCriteriaTest;
-import searchOnMainPageTest.SearchOnMainPageRichniInspTest;
-import sphereTest.SphereTest;
-import spivrobitnykyOrganuTest.SpivrobitnykyOrganuTest;
-import storinkaOrganuSubMenuTest.StorinkaOrganuSubMenuTest;
-import subjectsTest.*;
-import trainingMaterialTest.TrainingMaterialTest;
-import updateUserTest.UpdateUserTest;
-import vyhidTest.VyhidTest;
-import zakonodavstvoTest.ZakonodavstvoTest;
-import zvitnistTest.RichnaZvitnistPoOrganuTest;
-import zvitnistTest.RichniZvityTest;
-import zvitnistTest.ZvitPoZahodahTest;
-import zvitnistTest.ZvitProPorushenniaVymogTest;
 
 
 @RunWith(Suite.class)
