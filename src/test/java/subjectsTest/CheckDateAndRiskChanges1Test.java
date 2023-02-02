@@ -30,7 +30,7 @@ public class CheckDateAndRiskChanges1Test extends AbstractParentTest {
         String pathToKey = (String) personData.get("pathToKey");
         String absolute = Utils.getAbsolutePathToKey(pathToKey);
         mainNotAuthPage.openPage();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
         loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
     }
 

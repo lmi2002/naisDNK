@@ -20,7 +20,7 @@ public class AudytTest extends AbstractParentTest {
     @Before
     public void preconditions() {
         mainNotAuthPage.openPage();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
         loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
         mainPage.mainMenu.clickOnAudyt();
     }

@@ -48,7 +48,7 @@ public class LoginTest extends AbstractParentTest {
     public void validTest() {
         mainNotAuthPage.openPage();
         mainNotAuthPage.checkCurrentUrl();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
         loginPage.checkIsPageURLPresent();
         loginPage.checkIsPageTitlePresent();
         loginPage.enterLoginInToInputLogin(login);
