@@ -11,7 +11,7 @@ public class AnalitykaTest extends AbstractParentTest {
     public void preconditions() {
         analitykaPage.openPage();
         analitykaPage.checkCurrentAdminUrl();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
         loginPage.fillingLoginFormAndSubmitIt("lifecomru53@gmail.com", "123456789");
     }
     @Ignore("Авторизация проходит через лигин и пароль через ссылку админа")

@@ -25,7 +25,7 @@ public class VybirkaTest extends AbstractParentTest {
         String absolute = Utils.getAbsolutePathToKey(pathToKey);
 
         mainNotAuthPage.openPage();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
         loginPage.extFillingLoginFormAndSubmit((String) personData.get("login"), (String) personData.get("passwd"), (String) personData.get("rnokpp"), absolute, (String) personData.get("passwdKey"));
     }
 
@@ -175,7 +175,7 @@ public class VybirkaTest extends AbstractParentTest {
         vybirka2021AfterSendingToCAPage.goToToArchiveBtnIsDisplayed();
         vybirka2021AfterSendingToCAPage.mainMenu.clickOnMenuKorystuvacha();
         vybirka2021AfterSendingToCAPage.mainMenu.clickOnVyhid();
-        mainNotAuthPage.clickOnUviyty();
+        // mainNotAuthPage.clickOnUviyty();
 
         //Відхилення затвердження плану перевірок (Админ ЦА)
 
